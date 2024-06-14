@@ -196,7 +196,7 @@ class App(tk.Tk):
         self.file_label_1.config(text=region1.filename)
         self.file_label_2.config(text=region2.filename)
 
-    def save_to_csv(self, output_file_path):
+    def save_file(self, output_file_path):
         # Map each region to its root.
         region_to_root = {uid: self.union_find.find(uid) for uid in self.regions.uid}
 
@@ -242,7 +242,7 @@ def main():
     # Start the graphical user interface, save the results when it is closed.
     app = App(annotations_file, image_directory)
     app.mainloop()
-    app.save_to_csv(args.output_file)
+    app.save_file(args.output_file)
 
 
 if __name__ == "__main__":

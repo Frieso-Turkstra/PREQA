@@ -1,0 +1,17 @@
+colour_id,colour_name,present
+0,beige,True
+1,black,True
+2,blue,True
+3,brown,True
+4,gold,False
+5,gray,True
+6,green,True
+7,orange,True
+8,pink,False
+9,purple,False
+10,red,True
+11,silver,True
+12,transparent,True
+13,white,True
+14,wooden,True
+15,yellow,True

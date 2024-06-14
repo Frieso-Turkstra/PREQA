@@ -73,7 +73,7 @@ def main():
     df["occlusion"] = region_attributes.apply(lambda attrs: attrs["occlusion"])
 
     # Add WordNet senses.
-    classes = pd.read_csv("classes.csv")
+    classes = pd.read_csv("resources/classes.csv")
     mappings = dict(zip(classes["class"], classes["wordnet_sense"]))
     df["wordnet_sense"] = df["label"].apply(lambda x: mappings[x])
 
