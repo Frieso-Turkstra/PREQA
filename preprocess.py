@@ -12,6 +12,7 @@ The following preprocessing steps are taken:
 - Assign a unique identifier to each region.
 - Flatten columns that contain dictionaries into separate columns.
 - Change the bounding box notation so it works with the Pillow library.
+- Add WordNet senses based on the labels.
 - Remove unnecessary columns.
 """
 
@@ -70,6 +71,11 @@ def main():
     region_attributes = df["region_attributes"].apply(json.loads)
     df["label"] = region_attributes.apply(lambda attrs: attrs["label"])
     df["occlusion"] = region_attributes.apply(lambda attrs: attrs["occlusion"])
+
+    # Add WordNet senses.
+    classes = pd.read_csv("classes.csv")
+    mappings = dict(zip(classes["class"], classes["wordnet_sense"]))
+    df["wordnet_sense"] = df["label"].apply(lambda x: mappings[x])
 
     # Remove unnecessary columns.
     unnecessary_columns = [
