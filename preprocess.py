@@ -74,7 +74,7 @@ def main():
 
     # Add WordNet senses.
     classes = pd.read_csv("resources/classes.csv")
-    mappings = dict(zip(classes["class"], classes["wordnet_sense"]))
+    mappings = dict(zip(classes["label"], classes["wordnet_sense"]))
     df["wordnet_sense"] = df["label"].apply(lambda x: mappings[x])
 
     # Remove unnecessary columns.

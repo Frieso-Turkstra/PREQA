@@ -1,4 +1,4 @@
-room_id,room_name,wordnet_sense,type_count
+_id,__name,wordnet_sense,_count
 0,gym,gym.n.01,0
 1,patio,patio.n.01,0
 2,lobby,lobby.n.01,0

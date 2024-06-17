@@ -1,0 +1,13 @@
+question_type,template
+existence,"Is there {entity} in the house?"
+count,"How many {entity} are there in the house?"
+colour,"What colour is the {obj}?"
+location,"What room is the {obj} located in?"
+preposition,"What is {preposition} the {obj}?"
+logical,"Is there {entity1} and {entity2} in the house?"
+existence_room,"Is there {obj} in the {room}?"
+count_room,"How many {obj} are there in the {room}?"
+colour_room,"What colour is the {obj} in the {room}?"
+preposition_room,"What is {preposition} the {obj} in the {room}?"
+logical_room,"Is there {obj1} and {obj2} in the {room}?"
+existence_room_colour,"Is there {colour} {obj} in the {room}?"

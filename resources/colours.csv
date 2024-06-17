@@ -1,4 +1,4 @@
-colour_id,colour_name,present
+_id,__name,present
 0,beige,True
 1,black,True
 2,blue,True

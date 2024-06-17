@@ -1,6 +1,6 @@
 """
 Author: Frieso Turkstra
-Date: 2024-06-14
+Date: 2024-06-15
 
 This program implements a graphical user interface to help with the annotation
 for object attributes. You can annotate the following attributes:
@@ -149,7 +149,7 @@ class App(tk.Tk):
                 return False
 
         # Otherwise, save the colours in the annotation file.
-        self.objects.loc[self.objects["object_id"] == self.object_id, "colours"] = str(colours)
+        self.objects.loc[self.objects["object_id"] == self.object_id, "colour"] = str(colours)
         return True
     
     def save_prepositions(self):
