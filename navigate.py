@@ -26,6 +26,11 @@ import pandas as pd
 import itertools
 import argparse
 import random
+import math
+import os
+
+seed_value = 42
+random.seed(seed_value)
 
 
 class Node:
@@ -167,7 +172,7 @@ class Environment:
             "minimal_distance_to_target": minimal_distance_to_target,
         }
 
-    def get_starting_position(self, num_actions, target):
+    def get_starting_position(self, num_actions: int, target: Node):
         all_shortest_paths = []
         for node in self.graph.nodes():
             shortest_path = self.shortest_path(node, target)
@@ -175,16 +180,16 @@ class Environment:
                 return node
         print(f"No node is {num_actions} actions removed from {target}.")
 
-    def random_path(self, source):
-        num_actions = 10
+    def random_path(self, source: Node):
+        num_actions = 15
         path = [source]
         for i in range(num_actions):
             neighbours = list(self.graph.successors(path[-1]))
             path.append(random.choice(neighbours))
         return path
 
-    def forward_only_path(self, source):
-        num_actions = 10
+    def forward_only_path(self, source: Node):
+        num_actions = 15
         path = [source]
         for i in range(num_actions):
             neighbours = list(self.graph.successors(path[-1]))
@@ -195,13 +200,34 @@ class Environment:
                     break
         return path
 
+    def shortest_path_visiting_nodes(self, source: Node, targets: [Node], optimal_view: bool):
+        # All possible orders in which the targets can be visited.
+        permutations = list(itertools.permutations(targets))
+        
+        shortest_path = [i for i in range(1000)]
+        for permutation in permutations:
+            path = [source]
+            for obj in permutation:
+                if optimal_view:
+                    path += self.shortest_path_to_optimal_view(path[-1], obj)[1:]
+                else:
+                    path += self.shortest_path_to_object(path[-1], obj)[1:]
+            if len(path) < len(shortest_path):
+                shortest_path = path
+
+        return shortest_path
+
 def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-a", "--annotations_file",
                         help="The finished annotations file.",
                         required=True,
                         type=str)
-    parser.add_argument("-i", "--input_directory",
+    parser.add_argument("-q", "--questions_file",
+                        help="File with all the questions",
+                        required=True,
+                        type=str)
+    parser.add_argument("-i", "--image_directory",
                         help="Directory with the images of the environment.",
                         required=True,
                         type=str)
@@ -212,51 +238,138 @@ def create_arg_parser():
     args = parser.parse_args()
     return args
 
+def stitch_images(images):
+    # Determine the number of images
+    num_images = len(images)
+    
+    # Calculate the grid size
+    grid_size = math.ceil(math.sqrt(num_images))
+    
+    # Image dimensions (assuming all images are the same size)
+    image_width, image_height = images[0].size
+    
+    # Calculate the number of rows and columns needed
+    num_rows = math.ceil(num_images / grid_size)
+    num_cols = min(num_images, grid_size)
+    
+    # Create a new blank image with the appropriate size
+    canvas_width = num_cols * image_width
+    canvas_height = num_rows * image_height
+    canvas = Image.new('RGB', (canvas_width, canvas_height))
+    
+    # Paste the images onto the canvas
+    for i, img in enumerate(images):
+        row = i // num_cols
+        col = i % num_cols
+        x = col * image_width
+        y = row * image_height
+        canvas.paste(img, (x, y))
+    
+    return canvas
+
+    
 def main():
     # Read in the command-line arguments.
     args = create_arg_parser()
 
-    # Ensure the annotations file is a csv file that exists.
+    # Ensure the annotations and questions files are csv files that exist.
     annotations_file = Path(args.annotations_file)
-    if not (
-        annotations_file.exists() and
-        annotations_file.is_file() and
-        annotations_file.suffix.lower() == ".csv"
-    ):
-        raise FileNotFoundError(
-            f"The file '{annotations_file}' does not exist or is not a CSV file."
-            )
+    questions_file = Path(args.questions_file)
+    for file in (annotations_file, questions_file):
+        if not (file.exists() and file.is_file() and file.suffix.lower() == ".csv"):
+            raise FileNotFoundError(
+                f"The file '{file}' does not exist or is not a CSV file."
+                )
 
     # Ensure the input directory already exists.
-    input_directory = Path(args.input_directory)
-    if not (input_directory.exists() and input_directory.is_dir()):
+    image_directory = Path(args.image_directory)
+    if not (image_directory.exists() and image_directory.is_dir()):
         raise FileNotFoundError(
-            f"The directory '{input_directory}' does not exist."
+            f"The directory '{image_directory}' does not exist."
             )
 
     # Select only image files from the input directory.
     image_extensions = {".jpg", ".jpeg", ".png"}
     image_files = [
-        Path(file) for file in input_directory.iterdir()
+        Path(file) for file in image_directory.iterdir()
         if file.suffix.lower() in image_extensions
     ]
-    
-    # Create environment.
+
+    # Read in the necessary data.
+    df_questions = pd.read_csv(questions_file)
+    df_questions["object_ids"] = df_questions["object_ids"].apply(eval)
+
+    # Get paths for each question.
     env = Environment(image_files, annotations_file)
+    
+    count = 0
+    for _, question in df_questions.iterrows():
 
-    # Pick a target.
-    target = random.choice(list(env.graph.nodes()))
+        # Get source and target nodes.
+        source = random.choice(list(env.graph.nodes()))
+        targets = question.object_ids
 
-    # Start the robot N actions away from target.
-    nodes = list(env.graph.nodes())
-    node1 = nodes[12]
-    path = env.forward_only_path(node1)
+        if question.question_type.startswith("conjunction") or question.question_type.startswith("disjunction"):
+            targets = [number for sublist in targets for number in sublist]
 
-    print(path)
-    print(env.evaluate(target, path))
+        # Find random path and forward only path
+        random_path = env.random_path(source)
+        forward_only_path = env.forward_only_path(source)
 
-    # Save path to output file and the type of navigation and the question?
+        # Check if the question is multi-target.
+        # Disjunction is mono-target because only one object needs to be seen
+        # to be able to answer the question.
+        if question.question_type.startswith("conjunction") or question.question_type.startswith("count"):
+            shortest_path_to_object = env.shortest_path_visiting_nodes(source, targets, optimal_view=False)
+            shortest_path_to_optimal_view = env.shortest_path_visiting_nodes(source, targets, optimal_view=True)
+        else:
+            # Select the path to the target that is closest.
+            shortest_path_to_object = [i for i in range(1000)]
+            shortest_path_to_optimal_view = [i for i in range(1000)]
 
+            for target in targets:
+                path_to_object = env.shortest_path_to_object(source, target)
+                path_to_optimal_view = env.shortest_path_to_optimal_view(source, target)
+
+                if len(path_to_object) < len(shortest_path_to_object):
+                    shortest_path_to_object = path_to_object
+
+                if len(path_to_optimal_view) < len(shortest_path_to_optimal_view):
+                    shortest_path_to_optimal_view = path_to_optimal_view
+
+        # Get images from paths
+        random_path_images = stitch_images([Image.open(node.image_file) for node in random_path])
+        forward_only_path_images = stitch_images([Image.open(node.image_file) for node in forward_only_path])
+        shortest_path_to_object_images = stitch_images([Image.open(node.image_file) for node in shortest_path_to_object])
+        shortest_path_to_optimal_view_images = stitch_images([Image.open(node.image_file) for node in shortest_path_to_optimal_view])
+        
+        # Save images.
+        random_path_images.save(f"path_images/{question.uid}_random.jpg")
+        forward_only_path_images.save(f"path_images/{question.uid}_forward_only.jpg")
+        shortest_path_to_object_images.save(f"path_images/{question.uid}_shortest_path_to_object.jpg")
+        shortest_path_to_optimal_view_images.save(f"path_images/{question.uid}_shortest_path_to_optimal_view.jpg")
+
+        nav_eval = {
+            "question_id": question.uid,
+            "source": source,
+            "random_path": [random_path],
+            "random_path_length": len(random_path),
+            "forward_only_path": [forward_only_path],
+            "forward_only_path_length": len(forward_only_path),
+            "shortest_path_to_object": [shortest_path_to_object],
+            "shortest_path_to_object_length": len(shortest_path_to_object),
+            "shortest_path_to_optimal_view": [shortest_path_to_optimal_view],
+            "shortest_path_to_optimal_view_length": len(shortest_path_to_optimal_view),
+        }
+
+        nav_df = pd.DataFrame(nav_eval)
+        file_exists = os.path.isfile(args.output_file)
+
+        write_header = not file_exists and count == 0
+        nav_df.to_csv(args.output_file, mode='a', index=False, header=write_header)
+
+        count += 1
+        print(count)
 
 if __name__ == "__main__":
     main()

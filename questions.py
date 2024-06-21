@@ -56,7 +56,6 @@ def create_arg_parser():
     args = parser.parse_args()
     return args
 
-
 def get_hypernyms(synset, max_steps):
     """
     Get all hypernyms of a synset up to max_steps steps removed.
@@ -119,8 +118,6 @@ def generate_questions(input_file):
     # Check if the file exists
     file_exists = os.path.isfile(output_file)
     df.to_csv(output_file, mode='a', index=False, header=not file_exists)
-
-    
 
 def generate_room_questions(rooms_df):
     questions = []
