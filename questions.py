@@ -9,12 +9,15 @@ The questions alongside additional attributes such as the answer and the
 identifiers of the objects referred to in the question are saved in a csv file.
 """
 
+from nltk.corpus import wordnet as wn
 from pathlib import Path
 import pandas as pd
 import itertools
 import argparse
 import inflect
 import uuid
+import os
+
 
 p = inflect.engine()
 
@@ -29,10 +32,12 @@ class Question:
         self.room_ids = [] if room_ids is None else room_ids
         self.uid = str(uuid.uuid4())
         self.origin = "template"
+        self.kwargs = kwargs
 
     @staticmethod
     def get_question(question_type, kwargs):
         df = pd.read_csv("resources/question_templates.csv")
+        question_type = question_type.split("_")[0]
         template = df.loc[df.question_type == question_type, "template"].squeeze()
         kwargs = {k: v.replace("_", " ") for k, v in kwargs.items()}
         return template.format(**kwargs)
@@ -51,9 +56,48 @@ def create_arg_parser():
     args = parser.parse_args()
     return args
 
+
+def get_hypernyms(synset, max_steps):
+    """
+    Get all hypernyms of a synset up to max_steps steps removed.
+    
+    :param synset: WordNet synset
+    :param max_steps: Maximum number of steps to trace back hypernyms
+    :return: A set of hypernyms up to max_steps
+    """
+    hypernyms = set()
+    current_level = {synset}
+    for _ in range(max_steps):
+        next_level = set()
+        for syn in current_level:
+            hypernyms.update(syn.hypernyms())
+            next_level.update(syn.hypernyms())
+        current_level = next_level
+    return hypernyms
+
+def common_ancestor_within_steps(wordnet_sense1, wordnet_sense2, max_steps):
+    """
+    Determine if two WordNet synsets have a common ancestor within max_steps.
+    
+    :param synset1: First WordNet synset
+    :param synset2: Second WordNet synset
+    :param max_steps: Maximum number of steps to trace back hypernyms
+    :return: True if there is a common ancestor, False otherwise
+    """
+    synset1 = wn.synset(wordnet_sense1)
+    synset2 = wn.synset(wordnet_sense2)
+    hypernyms1 = get_hypernyms(synset1, max_steps)
+    hypernyms2 = get_hypernyms(synset2, max_steps)
+    
+    # Check for common hypernyms
+    common_hypernyms = hypernyms1.intersection(hypernyms2)
+    return len(common_hypernyms) > 0
+
 def generate_questions(input_file):
+    # Read in and preprocess data.
     rooms_df = pd.read_csv("resources/rooms.csv")
-    labels_df = pd.read_csv("resources/classes.csv")
+    classes_df = pd.read_csv("resources/classes.csv")
+    colours_df = pd.read_csv("resources/colours.csv")
     objects_df = pd.read_csv(input_file)
     objects_df = objects_df.drop_duplicates("object_id")
 
@@ -61,196 +105,572 @@ def generate_questions(input_file):
     for column in ["colour"] + prepositions:
         objects_df[column] = objects_df[column].str.replace("'", '"').apply(eval)
 
-    # Basic questions on house-level
-    existence_questions = get_existence_questions(rooms_df, labels_df, objects_df)
-    count_questions = get_count_questions(rooms_df, labels_df, objects_df)
-    colour_questions = get_colour_questions(objects_df)
-    location_questions = get_location_questions(objects_df)
-    preposition_questions = get_preposition_questions(objects_df, prepositions)
-    logical_questions = get_logical_questions(rooms_df, labels_df, objects_df)
+    # Generate questions
+    # questions = generate_room_questions(rooms_df)
+    # questions = generate_basic_questions(classes_df, objects_df)
+    # questions = generate_location_questions(rooms_df, classes_df, objects_df)
+    # questions = generate_colour_questions(colours_df, classes_df, objects_df)
+    questions = generate_colour_location_questions(rooms_df, colours_df, classes_df, objects_df)
 
-    # Basic questions on room-level
-    existence_room_questions = get_existence_room_questions(rooms_df, labels_df, objects_df)
-    count_room_questions = get_count_room_questions(rooms_df, labels_df, objects_df)
-    colour_room_questions = get_colour_room_questions(rooms_df, objects_df)
-    preposition_room_questions = get_preposition_room_questions(rooms_df, objects_df, prepositions)
-    logical_room_questions = get_logical_room_questions(rooms_df, labels_df, objects_df)
+    # Save questions
+    df = pd.DataFrame([vars(q) for q in questions])
+    output_file = "test.csv"
 
-    # # Complex question (basic questions + room + colour)
-    # existence_room_colour_questions = get_existence_room_colour_questions(rooms_df, labels_df, objects_df, colours_df)
-    # count_room_colour_questions = get_count_room_colour_questions()
-    # preposition_room_colour_questions = get_preposition_room_colour_questions()
-    # logical_room_colour_questions = get_logical_room_colour_questions()
+    # Check if the file exists
+    file_exists = os.path.isfile(output_file)
+    df.to_csv(output_file, mode='a', index=False, header=not file_exists)
 
-    return pd.concat([
-        existence_questions,
-        count_questions,
-        colour_questions,
-        location_questions,
-        preposition_questions,
-        logical_questions,
-        existence_room_questions,
-        count_room_questions,
-        colour_room_questions,
-        preposition_room_questions,
-        logical_room_questions,
-    ], ignore_index=False)
+    
 
-def get_existence_questions(rooms_df, labels_df, objects_df):
-    # Is there {entity} in the house?
-    room_existence_questions = rooms_df.apply(lambda room: Question(
-        question_type="existence",
-        answer="yes" if room._count else "no",
-        room_ids=[room._id],
-        entity=p.a(room.__name),
-    ), axis=1)
+def generate_room_questions(rooms_df):
+    questions = []
+    colour = ""
+    location = "house"
 
-    object_existence_questions = labels_df.apply(lambda obj: Question(
-        question_type="existence",
-        answer="yes" if obj.type_count else "no",
-        object_ids=objects_df.loc[objects_df.label == obj.label, "object_id"].tolist(),
-        entity=p.a(obj.label),
-    ), axis=1)
+    for _, room in rooms_df.iterrows():
 
-    return pd.concat([room_existence_questions, object_existence_questions], ignore_index=True)
+        # Is there {colour}{entity} in the {location}?
+        existence_question = Question(
+            question_type="existence_room",
+            answer="yes" if room._count else "no",
+            room_ids=[room._id] if room._count else [],
+            colour=colour,
+            entity=p.a(room.__name),
+            location=location,
+        )
+        # How many {colour}{entity} are there in the {location}?
+        count_question = Question(
+            question_type="count_room",
+            answer=room._count,
+            room_ids=[room._id] if room._count else [],
+            colour=colour,
+            entity=p.plural(room.__name),
+            location=location,
+        )
 
-def get_count_questions(rooms_df, labels_df, objects_df):
-    # How many {entity} are there in the house?
-    room_count_questions = rooms_df.apply(lambda room: Question(
-        question_type="count",
-        answer=room._count,
-        room_ids=[room._id],
-        entity=p.plural(room.__name),
-    ), axis=1)
+        questions += [existence_question, count_question]
 
-    object_count_questions = labels_df.apply(lambda obj: Question(
-        question_type = "count",
-        answer=obj.type_count,
-        object_ids=objects_df.loc[objects_df.label == obj.label, "object_id"].tolist(),
-        entity=p.plural(obj.label)
-    ), axis=1)
+    for (_, room1), (_, room2) in itertools.combinations(rooms_df.iterrows(), 2):
 
-    return pd.concat([room_count_questions, object_count_questions], ignore_index=True)
-
-def get_colour_questions(objects_df):
-    # What colour is the {obj}?
-    return objects_df.drop_duplicates("label").apply(lambda obj: Question(
-        question_type="colour",
-        object_ids=(object_ids := objects_df.loc[objects_df.label == obj.label, "object_id"].tolist()),
-        answer={obj_id: objects_df.loc[objects_df.object_id == obj_id, "colour"].squeeze() for obj_id in object_ids},
-        ambiguous=len(object_ids) > 1,
-        obj=obj.label
-    ), axis=1)
-
-def get_location_questions(objects_df):
-    # What room is the {obj} located in?
-    return objects_df.drop_duplicates("label").apply(lambda obj: Question(
-        question_type="location",
-        object_ids=(object_ids := objects_df.loc[objects_df.label == obj.label, "object_id"].tolist()),
-        answer={obj_id: objects_df.loc[objects_df.object_id == obj_id, "location"].squeeze() for obj_id in object_ids},
-        ambiguous=len(object_ids) > 1,
-        obj=obj.label
-    ), axis=1)
-
-def get_preposition_questions(objects_df, prepositions):
-    # What is {preposition} the {obj}?
-    questions = pd.concat([objects_df.drop_duplicates("label").apply(lambda obj: Question(
-        question_type="preposition",
-        object_ids=(object_ids := objects_df.loc[(objects_df.label == obj.label) & (objects_df[preposition].str.len() > 0), "object_id"].tolist()),
-        answer={obj_id: objects_df.loc[objects_df.object_id == obj_id, preposition].squeeze() for obj_id in object_ids},
-        ambiguous=len(object_ids) > 1,
-        preposition=preposition,
-        obj=obj.label
-    ), axis=1) for preposition in prepositions], ignore_index=True)
-    return questions[questions.apply(lambda q: bool(q.answer))]
-
-def get_logical_questions(rooms_df, labels_df, objects_df):
-    # Is there {entity1} and {entity2} in the house?
-    room_logical_questions = pd.Series([Question(
-            question_type="logical",
+        # Is there {colour1}{entity1} and {colour1}{entity2} in the {location}?
+        conjunction_question = Question(
+            question_type="conjunction_room",
             answer="yes" if room1._count and room2._count else "no",
-            room_ids=[room1._id, room2._id],
+            room_ids=[
+                [room1._id] if room1._count else [],
+                [room2._id] if room2._count else []
+                ],
+            colour1=colour,
+            colour2=colour,
             entity1=p.a(room1.__name),
             entity2=p.a(room2.__name),
-        ) for (_, room1), (_, room2) in itertools.combinations(rooms_df.iterrows(), 2)
-    ])
+            location=location,
+        )
 
-    object_logical_questions = pd.Series([Question(
-            question_type="logical",
-            answer="yes" if obj1.type_count and obj2.type_count else "no",
-            object_ids=[
-                objects_df.loc[objects_df.label == obj1.label, "object_id"].tolist(),
-                objects_df.loc[objects_df.label == obj2.label, "object_id"].tolist(),
+        # Is there {colour2}{entity1} or {colour2}{entity2} in the {location}?
+        disjunction_question = Question(
+            question_type="disjunction_room",
+            answer="yes" if room1._count or room2._count else "no",
+            room_ids=[
+                [room1._id] if room1._count else [],
+                [room2._id] if room2._count else []
                 ],
+            colour1=colour,
+            colour2=colour,
+            entity1=p.a(room1.__name),
+            entity2=p.a(room2.__name),
+            location=location,
+        )
+
+        questions += [conjunction_question, disjunction_question]
+
+    return questions
+
+def generate_basic_questions(classes_df, objects_df):
+    questions = []
+    colour = ""
+    location = "house"
+
+    # Conjunction and Disjunction.
+    for (_, obj1), (_, obj2) in itertools.combinations(classes_df.iterrows(), 2):
+        
+        max_steps = 2
+        if not common_ancestor_within_steps(obj1.wordnet_sense, obj2.wordnet_sense, max_steps):
+            continue
+
+        objects1 = objects_df.loc[objects_df.label == obj1.label, "object_id"].tolist()
+        objects2 = objects_df.loc[objects_df.label == obj2.label, "object_id"].tolist()
+
+        # Is there {colour1}{entity1} and {colour1}{entity2} in the {location}?
+        conjunction_question = Question(
+            question_type="conjunction_object",
+            object_ids=[objects1, objects2],
+            answer="yes" if len(objects1) and len(objects2) else "no",
+            colour1=colour,
+            colour2=colour,
+            entity1=p.a(obj1.label), 
+            entity2=p.a(obj2.label),
+            location=location,
+        )
+        questions.append(conjunction_question)
+
+        # Is there {colour2}{entity1} or {colour2}{entity2} in the {location}?
+        disjunction_question = Question(
+            question_type="disjunction_object",
+            object_ids=[objects1, objects2],
+            answer="yes" if len(objects1) or len(objects2) else "no",
+            colour1=colour,
+            colour2=colour,
             entity1=p.a(obj1.label),
             entity2=p.a(obj2.label),
-        ) for (_, obj1), (_, obj2) in itertools.combinations(labels_df.iterrows(), 2)
-    ])
-    return pd.concat([room_logical_questions, object_logical_questions], ignore_index=True)
+            location=location,
+        )
+        questions.append(disjunction_question)
+    
+    # Existence, Count, Location, Colour, Spatial.
+    for _, row in classes_df.iterrows():
+        
+        # Select all objects with the current row's label.
+        objects = objects_df.loc[objects_df.label == row.label, "object_id"].tolist()
 
-def get_existence_room_questions(rooms_df, labels_df, objects_df):
-    # Is there {obj} in the {room}?
-    return pd.concat([labels_df.apply(lambda obj: Question(
-        question_type="existence_room",
-        object_ids=(object_ids := objects_df.loc[(objects_df.label == obj.label) & (objects_df.location == room.__name), "object_id"].tolist()),
-        answer="yes" if len(object_ids) else "no",
-        obj=p.a(obj.label),
-        room=room.__name,
-        room_ids=[room._id]
-    ), axis=1) for _, room in rooms_df.loc[rooms_df._count > 0].iterrows()], ignore_index=True)
+        # Is there {colour}{entity} in the {location}?
+        existence_question = Question(
+            question_type="existence_object",
+            object_ids=objects,
+            answer="yes" if len(objects) else "no",
+            colour=colour,
+            entity=p.a(row.label),
+            location=location,
+        )
+        questions.append(existence_question)
 
-def get_count_room_questions(rooms_df, labels_df, objects_df):
-    # How many {obj} are there in the {room}?
-    return pd.concat([labels_df.apply(lambda obj: Question(
-        question_type="count_room",
-        object_ids=(object_ids := objects_df.loc[(objects_df.label == obj.label) & (objects_df.location == room.__name), "object_id"].tolist()),
-        answer=len(object_ids),
-        obj=p.plural(obj.label),
-        room=room.__name,
-        room_ids=[room._id]
-    ), axis=1) for _, room in rooms_df.loc[rooms_df._count > 0].iterrows()], ignore_index=True)
+        # How many {colour}{entity} are there in the {location}?
+        count_question = Question(
+            question_type="count_object",
+            object_ids=objects,
+            answer=len(objects),
+            colour=colour,
+            entity=p.plural(row.label),
+            location=location,
+        )
+        questions.append(count_question)
+        
+        # Location, colour and spatial questions assume object existence.
+        if not objects:
+            continue
 
-def get_colour_room_questions(rooms_df, objects_df):
-    # What colour is the {obj} in the {room}?
-    questions = pd.concat([objects_df.drop_duplicates("label").apply(lambda obj: Question(
-        question_type="colour_room",
-        object_ids=(object_ids := objects_df.loc[(objects_df.label == obj.label) & (objects_df.location == room.__name), "object_id"].tolist()),
-        answer={obj_id: objects_df.loc[objects_df.object_id == obj_id, "colour"].squeeze() for obj_id in object_ids},
-        ambiguous=len(object_ids) > 1,
-        obj=obj.label,
-        room=room.__name,
-        room_ids=[room._id]
-    ), axis=1) for _, room in rooms_df.loc[rooms_df._count > 0].iterrows()], ignore_index=True)
-    return questions[questions.apply(lambda q: bool(q.answer))]
+        # What room is the {colour}{obj} located in? 
+        location_question = Question(
+            question_type="location_object",
+            object_ids=objects,
+            answer={
+                obj_id: objects_df.loc[objects_df.object_id == obj_id, "location"].squeeze()
+                for obj_id in objects
+                },
+            ambiguous=len(objects) > 1,
+            colour=colour,
+            obj=row.label,
+        )
+        questions.append(location_question)
 
-def get_preposition_room_questions(rooms_df, objects_df, prepositions):
-    # What is {preposition} the {obj} in the {room}?
-    questions = pd.concat([objects_df.drop_duplicates("label").apply(lambda obj: Question(
-        question_type="preposition_room",
-        object_ids=(object_ids := objects_df.loc[(objects_df.label == obj.label) & (objects_df.location == room.__name) & (objects_df[preposition].str.len() > 0), "object_id"].tolist()),
-        answer={obj_id: objects_df.loc[objects_df.object_id == obj_id, preposition].squeeze() for obj_id in object_ids},
-        ambiguous=len(object_ids) > 1,
-        preposition=preposition,
-        obj=obj.label,
-        room=room.__name,
-        room_ids=[room._id]
-    ), axis=1) for preposition in prepositions for _, room in rooms_df.loc[rooms_df._count > 0].iterrows()], ignore_index=True)
-    return questions[questions.apply(lambda q: bool(q.answer))]
+        # What colour is the {obj}{location}?
+        colour_question = Question(
+            question_type="colour_object",
+            object_ids=objects,
+            answer={
+                obj_id: objects_df.loc[objects_df.object_id == obj_id, "colour"].squeeze()
+                for obj_id in objects
+                },
+            ambiguous=len(objects) > 1,
+            obj=row.label,
+            location="",
+        )
+        questions.append(colour_question)
 
-def get_logical_room_questions(rooms_df, labels_df, objects_df):
-    # Is there {obj1} and {obj2} in the {room}?
-    return pd.Series([Question(
-            question_type="logical_room",
-            object_ids=(object_ids := [
-                objects_df.loc[(objects_df.label == obj1.label) & (objects_df.location == room.__name), "object_id"].tolist(),
-                objects_df.loc[(objects_df.label == obj2.label) & (objects_df.location == room.__name), "object_id"].tolist(),
-                ]),
-            answer="yes" if len(object_ids[0]) and len(object_ids[1]) else "no",
-            room_ids=[room._id],
-            obj1=p.a(obj1.label),
-            obj2=p.a(obj2.label),
-            room=room.__name
-        ) for _, room in rooms_df.loc[rooms_df._count > 0].iterrows() for (_, obj1), (_, obj2) in itertools.combinations(labels_df.iterrows(), 2)])
+        # What is {preposition} the {colour}{obj}{location}?
+        for preposition in ("on", "above", "below", "next_to"):
+
+            objects_with_preposition = []
+            for obj in objects:
+                if not objects_df.loc[(objects_df.object_id == obj) & (objects_df[preposition].str.len() > 0)].empty:
+                    objects_with_preposition.append(obj)
+
+            if objects_with_preposition:
+                spatial_question = Question(
+                    question_type="spatial_object",
+                    object_ids=objects_with_preposition,
+                    answer={
+                        obj: objects_df.loc[objects_df.object_id == obj, preposition].squeeze()
+                        for obj in objects_with_preposition
+                        },
+                    ambiguous=len(objects_with_preposition) > 1,
+                    preposition=preposition,
+                    colour=colour,
+                    obj=row.label,
+                    location="",
+                )
+                questions.append(spatial_question)
+
+    return questions
+
+def generate_location_questions(rooms_df, classes_df, objects_df):
+    questions = []
+    colour = ""
+
+    for _, room in rooms_df.iterrows():
+        
+        # Assumes room existence.
+        if not room._count:
+            continue
+
+        location = room.__name
+
+        # Conjunction and Disjunction.
+        for (_, obj1), (_, obj2) in itertools.combinations(classes_df.iterrows(), 2):
+
+            max_steps = 2
+            if not common_ancestor_within_steps(obj1.wordnet_sense, obj2.wordnet_sense, max_steps):
+                continue
+
+            objects1 = objects_df.loc[(objects_df.label == obj1.label) & (objects_df.location == room.__name), "object_id"].tolist()
+            objects2 = objects_df.loc[(objects_df.label == obj2.label) & (objects_df.location == room.__name), "object_id"].tolist()
+
+            # Is there {colour1}{entity1} and {colour1}{entity2} in the {location}?
+            conjunction_question = Question(
+                question_type="conjunction_location",
+                object_ids=[objects1, objects2],
+                answer="yes" if len(objects1) and len(objects2) else "no",
+                colour1=colour,
+                colour2=colour,
+                entity1=p.a(obj1.label), 
+                entity2=p.a(obj2.label),
+                location=location,
+            )
+            questions.append(conjunction_question)
+
+            # Is there {colour2}{entity1} or {colour2}{entity2} in the {location}?
+            disjunction_question = Question(
+                question_type="disjunction_location",
+                object_ids=[objects1, objects2],
+                answer="yes" if len(objects1) or len(objects2) else "no",
+                colour1=colour,
+                colour2=colour,
+                entity1=p.a(obj1.label),
+                entity2=p.a(obj2.label),
+                location=location,
+            )
+            questions.append(disjunction_question)
+
+        # Existence, Count, Colour, Spatial.
+        for _, row in classes_df.iterrows():
+            
+            # Select all objects with the current row's label and the room.
+            objects = objects_df.loc[(objects_df.label == row.label) & (objects_df.location == room.__name), "object_id"].tolist()
+
+            # Is there {colour}{entity} in the {location}?
+            existence_question = Question(
+                question_type="existence_location",
+                object_ids=objects,
+                answer="yes" if len(objects) else "no",
+                colour=colour,
+                entity=p.a(row.label),
+                location=location,
+            )
+            questions.append(existence_question)
+
+            # How many {colour}{entity} are there in the {location}?
+            count_question = Question(
+                question_type="count_location",
+                object_ids=objects,
+                answer=len(objects),
+                colour=colour,
+                entity=p.plural(row.label),
+                location=location,
+            )
+            questions.append(count_question)
+            
+            # Colour and spatial questions assume object existence.
+            if not objects:
+                continue
+
+            # What colour is the {obj}{location}?
+            colour_question = Question(
+                question_type="colour_location",
+                object_ids=objects,
+                answer={
+                    obj_id: objects_df.loc[objects_df.object_id == obj_id, "colour"].squeeze()
+                    for obj_id in objects
+                    },
+                ambiguous=len(objects) > 1,
+                obj=row.label,
+                location=f" in the {location}",
+            )
+            questions.append(colour_question)
+
+            # What is {preposition} the {colour}{obj}{location}?
+            for preposition in ("on", "above", "below", "next_to"):
+
+                objects_with_preposition = []
+                for obj in objects:
+                    if not objects_df.loc[(objects_df.object_id == obj) & (objects_df[preposition].str.len() > 0)].empty:
+                        objects_with_preposition.append(obj)
+
+                if objects_with_preposition:
+                    spatial_question = Question(
+                        question_type="spatial_location",
+                        object_ids=objects_with_preposition,
+                        answer={
+                            obj: objects_df.loc[objects_df.object_id == obj, preposition].squeeze()
+                            for obj in objects_with_preposition
+                            },
+                        ambiguous=len(objects_with_preposition) > 1,
+                        preposition=preposition,
+                        colour=colour,
+                        obj=row.label,
+                        location=f" in the {location}",
+                    )
+                    questions.append(spatial_question)
+
+    return questions
+    
+def generate_colour_questions(colours_df, classes_df, objects_df):
+    questions = []
+    location = "house"
+
+    # Conjunction and Disjunction.
+    for (_, obj1), (_, obj2) in itertools.combinations(classes_df.iterrows(), 2):
+
+        max_steps = 2
+        if not common_ancestor_within_steps(obj1.wordnet_sense, obj2.wordnet_sense, max_steps):
+            continue
+
+        for (_, colour1), (_, colour2) in itertools.combinations(colours_df.iterrows(), 2):
+
+            objects1 = objects_df.loc[(objects_df.label == obj1.label) & (objects_df.colour.apply(lambda x: colour1.__name in x)), "object_id"].tolist()
+            objects2 = objects_df.loc[(objects_df.label == obj2.label) & (objects_df.colour.apply(lambda x: colour2.__name in x)), "object_id"].tolist()
+
+            # Is there {colour1}{entity1} and {colour1}{entity2} in the {location}?
+            conjunction_question = Question(
+                question_type="conjunction_colour",
+                object_ids=[objects1, objects2],
+                answer="yes" if len(objects1) and len(objects2) else "no",
+                colour1=p.a(colour1.__name) + " ",
+                colour2=p.a(colour2.__name) + " ",
+                entity1=obj1.label, 
+                entity2=obj2.label,
+                location=location,
+            )
+            questions.append(conjunction_question)
+                
+            # Is there {colour2}{entity1} or {colour2}{entity2} in the {location}?
+            disjunction_question = Question(
+                question_type="disjunction_colour",
+                object_ids=[objects1, objects2],
+                answer="yes" if len(objects1) or len(objects2) else "no",
+                colour1=p.a(colour1.__name) + " ",
+                colour2=p.a(colour2.__name) + " ",
+                entity1=obj1.label,
+                entity2=obj2.label,
+                location=location,
+            )
+            questions.append(disjunction_question)
+
+    for _, colour in colours_df.iterrows():
+
+        # Existence, Count, Location, Spatial.
+        for _, row in classes_df.iterrows():
+            
+            # Select all objects with the current row's label and colour.
+
+            objects = objects_df.loc[(objects_df.label == row.label) & (objects_df.colour.apply(lambda x: colour.__name in x)), "object_id"].tolist()
+            
+            # Is there {colour}{entity} in the {location}?
+            existence_question = Question(
+                question_type="existence_colour",
+                object_ids=objects,
+                answer="yes" if len(objects) else "no",
+                colour=p.a(colour.__name) + " ",
+                entity=row.label,
+                location=location,
+            )
+            questions.append(existence_question)
+
+            # How many {colour}{entity} are there in the {location}?
+            count_question = Question(
+                question_type="count_colour",
+                object_ids=objects,
+                answer=len(objects),
+                colour=colour.__name + " ",
+                entity=p.plural(row.label),
+                location=location,
+            )
+            questions.append(count_question)
+            
+            # Location, colour and spatial questions assume object existence.
+            if not objects:
+                continue
+
+            # What room is the {colour}{obj} located in? 
+            location_question = Question(
+                question_type="location_colour",
+                object_ids=objects,
+                answer={
+                    obj_id: objects_df.loc[objects_df.object_id == obj_id, "location"].squeeze()
+                    for obj_id in objects
+                    },
+                ambiguous=len(objects) > 1,
+                colour=colour.__name + " ",
+                obj=row.label,
+            )
+            questions.append(location_question)
+
+            # What is {preposition} the {colour}{obj}{location}?
+            for preposition in ("on", "above", "below", "next_to"):
+
+                objects_with_preposition = []
+                for obj in objects:
+                    if not objects_df.loc[(objects_df.object_id == obj) & (objects_df[preposition].str.len() > 0)].empty:
+                        objects_with_preposition.append(obj)
+
+                if objects_with_preposition:
+                    spatial_question = Question(
+                        question_type="spatial_colour",
+                        object_ids=objects_with_preposition,
+                        answer={
+                            obj: objects_df.loc[objects_df.object_id == obj, preposition].squeeze()
+                            for obj in objects_with_preposition
+                            },
+                        ambiguous=len(objects_with_preposition) > 1,
+                        preposition=preposition,
+                        colour=colour.__name + " ",
+                        obj=row.label,
+                        location="",
+                    )
+                    questions.append(spatial_question)
+                    continue
+
+    return questions
+    
+def generate_colour_location_questions(rooms_df, colours_df, classes_df, objects_df):
+    questions = []
+
+    total = 0
+    yes_conjunction = 0
+    yes_disjunction = 0
+
+    for _, room in rooms_df.iterrows():
+
+        # Assumes room existence.
+        if not room._count:
+            continue
+
+        location = room.__name
+
+        # Conjunction and Disjunction.
+        for (_, obj1), (_, obj2) in itertools.combinations(classes_df.iterrows(), 2):
+
+            max_steps = 2
+            if not common_ancestor_within_steps(obj1.wordnet_sense, obj2.wordnet_sense, max_steps):
+                continue
+
+            for (_, colour1), (_, colour2) in itertools.combinations(colours_df.iterrows(), 2):
+
+                objects1 = objects_df.loc[(objects_df.label == obj1.label) & (objects_df.location == room.__name) & (objects_df.colour.apply(lambda x: colour1.__name in x)), "object_id"].tolist()
+                objects2 = objects_df.loc[(objects_df.label == obj2.label) & (objects_df.location == room.__name) & (objects_df.colour.apply(lambda x: colour2.__name in x)), "object_id"].tolist()
+
+                total += 1
+                yes_conjunction += (len(objects1) and len(objects2))
+                yes_disjunction += (len(objects1) or len(objects2))
+
+                # Is there {colour1}{entity1} and {colour1}{entity2} in the {location}?
+                conjunction_question = Question(
+                    question_type="conjunction_colour_location",
+                    object_ids=[objects1, objects2],
+                    answer="yes" if len(objects1) and len(objects2) else "no",
+                    colour1=p.a(colour1.__name) + " ",
+                    colour2=p.a(colour2.__name) + " ",
+                    entity1=obj1.label, 
+                    entity2=obj2.label,
+                    location=location,
+                )
+                questions.append(conjunction_question)
+
+                # Is there {colour2}{entity1} or {colour2}{entity2} in the {location}?
+                disjunction_question = Question(
+                    question_type="disjunction_colour_location",
+                    object_ids=[objects1, objects2],
+                    answer="yes" if len(objects1) or len(objects2) else "no",
+                    colour1=p.a(colour1.__name) + " ",
+                    colour2=p.a(colour2.__name) + " ",
+                    entity1=obj1.label,
+                    entity2=obj2.label,
+                    location=location,
+                )
+                questions.append(disjunction_question)
+
+        for _, colour in colours_df.iterrows():
+
+            # Existence, Count, Colour, Spatial.
+            for _, row in classes_df.iterrows():
+                
+                # Select all objects with the current row's label and the room.
+                objects = objects_df.loc[(objects_df.label == row.label) & (objects_df.location == room.__name) & (objects_df.colour.apply(lambda x: colour.__name in x)), "object_id"].tolist()
+
+                # Is there {colour}{entity} in the {location}?
+                existence_question = Question(
+                    question_type="existence_colour_location",
+                    object_ids=objects,
+                    answer="yes" if len(objects) else "no",
+                    colour=p.a(colour.__name) + " ",
+                    entity=row.label,
+                    location=location,
+                )
+                questions.append(existence_question)
+
+                # How many {colour}{entity} are there in the {location}?
+                count_question = Question(
+                    question_type="count_colour_location",
+                    object_ids=objects,
+                    answer=len(objects),
+                    colour=colour.__name + " ",
+                    entity=p.plural(row.label),
+                    location=location,
+                )
+                questions.append(count_question)
+
+                # Spatial questions assume object existence.
+                if not objects:
+                    continue
+
+                # What is {preposition} the {colour}{obj}{location}?
+                for preposition in ("on", "above", "below", "next_to"):
+
+                    objects_with_preposition = []
+                    for obj in objects:
+                        if not objects_df.loc[(objects_df.object_id == obj) & (objects_df[preposition].str.len() > 0)].empty:
+                            objects_with_preposition.append(obj)
+
+                    if objects_with_preposition:
+                        spatial_question = Question(
+                            question_type="spatial_colour_location",
+                            object_ids=objects_with_preposition,
+                            answer={
+                                obj: objects_df.loc[objects_df.object_id == obj, preposition].squeeze()
+                                for obj in objects_with_preposition
+                                },
+                            ambiguous=len(objects_with_preposition) > 1,
+                            preposition=preposition,
+                            colour=colour.__name + " ",
+                            obj=row.label,
+                            location=f" in the {location}",
+                        )
+                        questions.append(spatial_question)
+
+    print("Total:", total)
+    print("Conjunction:", yes_conjunction)
+    print("Disjunction:", yes_disjunction)
+    return questions
+
 
 def main():
     # Read in the command-line arguments.
@@ -268,8 +688,9 @@ def main():
             )
 
     # Generate and save questions.
-    questions = pd.DataFrame([vars(question) for question in generate_questions(input_file)])
-    questions.to_csv(args.output_file, index=False)
+    generate_questions(input_file)
+    # questions = pd.DataFrame([vars(question) for question in generate_questions(input_file)])
+    # questions.to_csv(args.output_file, index=False)
 
 if __name__ == "__main__":
     main()
