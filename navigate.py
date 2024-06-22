@@ -29,6 +29,9 @@ import random
 import math
 import os
 
+from networkx.algorithms.approximation import traveling_salesman_problem, greedy_tsp
+from functools import lru_cache
+
 seed_value = 42
 random.seed(seed_value)
 
@@ -61,6 +64,7 @@ class Environment:
         # Construct an unweighted, directed graph from the nodes and edges.
         self.graph = nx.DiGraph()
         self.graph.add_edges_from(edges) # automatically adds the nodes
+        self.tsp_path = self.directed_tsp()
     
     def get_edges(self, nodes) -> [(Node,Node)]:
         # Note: this function is specifically designed to work for num_tilt = 3, num_directions = 4.
@@ -107,9 +111,11 @@ class Environment:
             )
         plt.show()
 
+    @lru_cache
     def shortest_path(self, source: Node, target:Node) -> [Node]:
         return nx.shortest_path(self.graph, source=source, target=target)
 
+    @lru_cache
     def shortest_path_to_object(self, source: Node, object_id: int) -> [Node]:
         # Find all images that display the object.
         filenames = self.annotations[self.annotations.object_id == object_id].filename
@@ -123,6 +129,8 @@ class Environment:
                     break
 
         shortest_paths = [self.shortest_path(source, node) for node in nodes]
+        if not shortest_paths:
+            print("this is the problem")
         return min(shortest_paths, key=len)
 
     def occlusion_sort(self, obj) -> tuple:
@@ -130,6 +138,7 @@ class Environment:
         object_area = (obj.x2 - obj.x1) * (obj.y2 - obj.y1)
         return (occlusion_levels[obj.occlusion], -object_area)
 
+    @lru_cache
     def shortest_path_to_optimal_view(self, source: Node, object_id: int) -> [Node]:
         # Find all images that display the object.
         images = self.annotations[self.annotations.object_id == object_id]
@@ -200,11 +209,28 @@ class Environment:
                     break
         return path
 
+    def shortest_path_conjunction(self, source, list1, list2, optimal_view):
+        pairs = list(itertools.product(list1, list2))
+
+        shortest_path = self.tsp_path
+        for pair in pairs:
+            path = self.shortest_path_visiting_nodes(source, pair, optimal_view)
+            if len(path) < len(shortest_path):
+                shortest_path = path
+
+        return shortest_path
+
     def shortest_path_visiting_nodes(self, source: Node, targets: [Node], optimal_view: bool):
+        if any(isinstance(element, list) for element in targets):
+            if len(targets) != 2:
+                print("Check this out, not two??")
+                exit()
+            return self.shortest_path_conjunction(source, targets[0], targets[1], optimal_view)
+
         # All possible orders in which the targets can be visited.
         permutations = list(itertools.permutations(targets))
         
-        shortest_path = [i for i in range(1000)]
+        shortest_path = self.tsp_path
         for permutation in permutations:
             path = [source]
             for obj in permutation:
@@ -216,6 +242,27 @@ class Environment:
                 shortest_path = path
 
         return shortest_path
+
+    def directed_tsp(self):
+        # Compute shortest path lengths between all pairs of nodes
+        print("calculating all shortest path pairs")
+        all_pairs_shortest_path_length = dict(nx.floyd_warshall(self.graph))
+
+        print("creating new directed graph")
+        # Create a new directed graph to hold the shortest paths
+        H = nx.DiGraph()
+        for u in self.graph.nodes():
+            for v in self.graph.nodes():
+                if u != v:
+                    H.add_edge(u, v, weight=all_pairs_shortest_path_length[u][v])
+
+        print("approximating TSP")
+        # Use the NetworkX approximation function for TSP on the directed graph
+        tsp_path = traveling_salesman_problem(H, cycle=True, method=greedy_tsp)
+        
+        return tsp_path
+
+
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
@@ -267,7 +314,7 @@ def stitch_images(images):
     
     return canvas
 
-    
+
 def main():
     # Read in the command-line arguments.
     args = create_arg_parser()
@@ -303,13 +350,14 @@ def main():
     env = Environment(image_files, annotations_file)
     
     count = 0
+    total = len(df_questions)
     for _, question in df_questions.iterrows():
 
         # Get source and target nodes.
         source = random.choice(list(env.graph.nodes()))
         targets = question.object_ids
 
-        if question.question_type.startswith("conjunction") or question.question_type.startswith("disjunction"):
+        if question.question_type.startswith("disjunction"):
             targets = [number for sublist in targets for number in sublist]
 
         # Find random path and forward only path
@@ -320,12 +368,16 @@ def main():
         # Disjunction is mono-target because only one object needs to be seen
         # to be able to answer the question.
         if question.question_type.startswith("conjunction") or question.question_type.startswith("count"):
-            shortest_path_to_object = env.shortest_path_visiting_nodes(source, targets, optimal_view=False)
-            shortest_path_to_optimal_view = env.shortest_path_visiting_nodes(source, targets, optimal_view=True)
+            if question.answer == "yes":
+                shortest_path_to_object = env.shortest_path_visiting_nodes(source, targets, optimal_view=False)
+                shortest_path_to_optimal_view = env.shortest_path_visiting_nodes(source, targets, optimal_view=True)
+            else:
+                shortest_path_to_object = env.tsp_path
+                shortest_path_to_optimal_view = env.tsp_path
         else:
             # Select the path to the target that is closest.
-            shortest_path_to_object = [i for i in range(1000)]
-            shortest_path_to_optimal_view = [i for i in range(1000)]
+            shortest_path_to_object = env.tsp_path
+            shortest_path_to_optimal_view = env.tsp_path
 
             for target in targets:
                 path_to_object = env.shortest_path_to_object(source, target)
@@ -343,11 +395,12 @@ def main():
         shortest_path_to_object_images = stitch_images([Image.open(node.image_file) for node in shortest_path_to_object])
         shortest_path_to_optimal_view_images = stitch_images([Image.open(node.image_file) for node in shortest_path_to_optimal_view])
         
+
         # Save images.
         random_path_images.save(f"path_images/{question.uid}_random.jpg")
-        forward_only_path_images.save(f"path_images/{question.uid}_forward_only.jpg")
-        shortest_path_to_object_images.save(f"path_images/{question.uid}_shortest_path_to_object.jpg")
-        shortest_path_to_optimal_view_images.save(f"path_images/{question.uid}_shortest_path_to_optimal_view.jpg")
+        forward_only_path_images.save(f"path_images/{question.uid}_forward.jpg")
+        shortest_path_to_object_images.save(f"path_images/{question.uid}_object.jpg")
+        shortest_path_to_optimal_view_images.save(f"path_images/{question.uid}_view.jpg")
 
         nav_eval = {
             "question_id": question.uid,
@@ -369,7 +422,7 @@ def main():
         nav_df.to_csv(args.output_file, mode='a', index=False, header=write_header)
 
         count += 1
-        print(count)
+        print(f"{count}/{total}")
 
 if __name__ == "__main__":
     main()
