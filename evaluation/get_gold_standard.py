@@ -3,9 +3,9 @@ import inflect
 
 p = inflect.engine()
 
-df = pd.read_csv("data/questions_downsampled.csv")
+df = pd.read_csv("../data/questions_downsampled.csv")
 
-objects_df = pd.read_csv("data/annotated.csv")
+objects_df = pd.read_csv("../data/annotated.csv")
 
 answers = []
 

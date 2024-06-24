@@ -22,18 +22,28 @@ def find_optimal_view(df, object_id):
 
 # Dataframe with no tilt.
 df["tilt"] = df["filename"].apply(lambda x: x.split('-')[2].split(".")[0])
+df_0 = df[df.tilt == "0"]
 df_1 = df[df.tilt == "1"]
-
+df_2 = df[df.tilt == "2"]
 
 num_unique_objects = len(df.object_id.unique())
+num_unique_objects_0 = len(df_0.object_id.unique())
 num_unique_objects_1 = len(df_1.object_id.unique())
+num_unique_objects_2 = len(df_2.object_id.unique())
+
+
 print(Counter(df.occlusion))
+print(Counter(df_0.occlusion))
 print(Counter(df_1.occlusion))
+print(Counter(df_2.occlusion))
+
 
 optimal_views = []
 for i in range(90):
     optimal_views.append(find_optimal_view(df, i))
 
-print(sum([1 for view in optimal_views if view.split("-")[2] == "1.jpg"]))
-exit()
+# print(sum([1 for view in optimal_views if view.split("-")[2] == "0.jpg"]))
+# print(sum([1 for view in optimal_views if view.split("-")[2] == "1.jpg"]))
+# print(sum([1 for view in optimal_views if view.split("-")[2] == "2.jpg"]))
+# exit()
 
