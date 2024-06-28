@@ -1,0 +1,8 @@
+question_type,template
+existence,"Is there {colour}{entity} in the {location}?"
+count,"How many {colour}{entity} are there in the {location}?"
+conjunction,"Is there {colour1}{entity1} and {colour2}{entity2} in the {location}?"
+disjunction,"Is there {colour1}{entity1} or {colour2}{entity2} in the {location}?"
+location,"What room is the {colour}{obj} located in?"
+colour,"What colour is the {obj}{location}?"
+spatial,"What is {preposition} the {colour}{obj}{location}?"
