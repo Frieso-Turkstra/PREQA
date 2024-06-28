@@ -1,14 +1,15 @@
 import pandas as pd
 import inflect
 
+# Used to convert numbers to words.
 p = inflect.engine()
 
-df = pd.read_csv("../data/questions_downsampled.csv")
+# Read in the questions and annotation files.
+df = pd.read_csv("../../questions/questions_downsampled.csv")
+objects_df = pd.read_csv("../../annotations/annotations.csv")
 
-objects_df = pd.read_csv("../data/annotated.csv")
-
+# Extract the answers.
 answers = []
-
 for _, row in df.iterrows():
     question_id = row["uid"]
     question_type = row["question_type"]
@@ -18,17 +19,21 @@ for _, row in df.iterrows():
         answer = row["answer"]
 
     if question_type.startswith("count"):
+        # Save count answers as their string counterpart (1 -> "one").
         answer = p.number_to_words(row["answer"])
 
     if question_type.startswith("location"):
+        # Get all unique locations.
         answer_dictionary = eval(row["answer"])
         answer = list(set(answer_dictionary.values()))
 
     if question_type.startswith("colour"):
+        # Get all unique colours.
         answer_dictionary = eval(row["answer"])
         answer = list({colour for colours in answer_dictionary.values() for colour in colours})
     
     if question_type.startswith("spatial"):
+        # Get the labels for the object ids.
         answer_dictionary = eval(row["answer"])
         object_ids = [object_id for object_ids in answer_dictionary.values() for object_id in object_ids]
         labels = {objects_df.loc[objects_df.object_id == object_id, "label"].tolist()[0] for object_id in object_ids}

@@ -18,11 +18,11 @@ def evaluate_file(file_path, thresholds):
 thresholds = np.linspace(0, 1, 100)
 
 # Evaluate the minicpm file.
-eval_file_1 = "intermediate_files/eval_minicpm_sampled.csv"
+eval_file_1 = "../vqa/evaluation/intermediate_files/eval_minicpm_sampled.csv"
 results_df1 = evaluate_file(eval_file_1, thresholds)
 
 # Evaluate the phi3 file.
-eval_file_2 = "intermediate_files/eval_phi3_sampled.csv"
+eval_file_2 = "../vqa/evaluation/intermediate_files/eval_phi3_sampled.csv"
 results_df2 = evaluate_file(eval_file_2, thresholds)
 
 # Plot the results for both files.
