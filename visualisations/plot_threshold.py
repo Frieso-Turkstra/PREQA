@@ -25,9 +25,14 @@ results_df1 = evaluate_file(eval_file_1, thresholds)
 eval_file_2 = "../vqa/evaluation/intermediate_files/eval_phi3_sampled.csv"
 results_df2 = evaluate_file(eval_file_2, thresholds)
 
+# Evaluate the phi3-text file.
+eval_file_3 = "../vqa/evaluation/intermediate_files/eval_phi3_text_only_sampled.csv"
+results_df3 = evaluate_file(eval_file_3, thresholds)
+
 # Plot the results for both files.
 plt.plot(results_df1["Threshold"], results_df1["Agreement"] * 100, label="MiniCPM-Llama3-V 2.5")
 plt.plot(results_df2["Threshold"], results_df2["Agreement"] * 100, label="Phi-3-vision-128k-instruct")
+plt.plot(results_df3["Threshold"], results_df3["Agreement"] * 100, label="Phi-3-mini-128k-instruct")
 
 # Add a vertical line at the optimal threshold.
 optimal_threshold = 0.626
