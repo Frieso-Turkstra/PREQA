@@ -1,9 +1,9 @@
 # PREQA: A Photorealistic Dataset for Embodied Question Answering
 
-The entire report can be found [here](./report_PREQA.pdf).
-
 PREQA is a high-quality dataset that is designed to bring the task of Embodied Question Answering (EQA) as close as possible to the real-world. As such, its
 primary focus is to be used as a test set for pre-trained EQA systems. The dataset consists of images of a real-world robot lab and introduces new features such as camera tilt, viewpoint-based navigation and novel annotations. The dataset contains 1,910 automatically generated questions about three rooms and 90 objects that have been annotated for their class, location, colour, and spatial relationships to other objects. 
+
+The entire report can be found [here](./report_PREQA.pdf).
 
 The raw image data, annotations and questions can be found in `\PREQA`. In the `\resources` directory, you can find the possible object classes, room types and colour values as well as the viewpoints data and the question templates. 
 
