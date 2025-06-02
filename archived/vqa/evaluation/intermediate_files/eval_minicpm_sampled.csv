@@ -1,0 +1,101 @@
+question_id,prediction,answer,question_type,sentence_similarity,word_similarity,exact_match,manual_score
+2dddf62a-a580-446b-815b-76d7b822b55a,yes there is a chair and a lamp in the house,yes,conjunction_object,0.1670659780502319,1.0,True,True
+e1dab541-ac23-4942-824e-b38097d08d6f,there is a table in the house,yes,disjunction_object,0.0896838903427124,0.6224743127822876,False,True
+14cff815-2426-407d-ae5d-436b295f0b30,no there is no bathtub visible in any of the images,no,existence_object,0.2379141449928283,0.9999999403953552,True,True
+55acafa2-af1f-41d6-a3c0-6aff815e4f1e,there is one fruit bowl in the house,zero,count_object,0.0682802945375442,0.3092198669910431,False,False
+1ea46bd3-616f-4df6-bef7-2af542433e1f,the notice board is located in the room with the window that has a view of the sky,['hallway'],location_object,0.2884221374988556,0.6049310564994812,False,False
+13dd537f-c7e9-43d7-8a06-13f4fce123f9,the door handle is silver,"['blue', 'white']",colour_object,0.2732150554656982,0.4369906783103943,False,False
+3ca711db-82aa-4d68-8a13-5e9d3d74862e,above the door handle there is a push button access control reader,['bag'],spatial_object,0.087102934718132,0.2684546411037445,False,False
+ace58c0d-ba6f-43ee-ae76-186334f199ae,no there is a bag but no water dispenser in the living room,no,conjunction_location,0.2821022868156433,0.9999999403953552,True,True
+c2f76051-7a0a-4bf2-becb-5d7ccf01d9bb,there is a pair of black headphones on the desk,no,disjunction_location,-0.028131753206253,0.4441228210926056,False,False
+4f6cdad5-524a-4dc0-87d1-81225ac308f2,yes,yes,existence_location,1.0,1.0,True,True
+318dfb8e-b2a6-41fe-91f7-39235e432560,there are two vases in the office,zero,count_location,0.0352183729410171,0.2647105157375335,False,False
+01f5771d-0a70-432c-a247-d22cee3f37a7,the answer cannot be provided without viewing the image,['silver'],colour_location,0.2068173885345459,0.2820171415805816,False,False
+b6e1aa3c-4815-4932-ba12-74f1acab1e39,there is a black purse hanging on the door in the living room,"['bag', 'door_handle']",spatial_location,0.4404357671737671,0.7807174324989319,False,True
+d00147ed-f59c-4cf4-b1cd-e7b20c143c3e,no there is no gray shower or gray sink visible in the house,no,conjunction_colour,0.1565025895833969,0.9999999403953552,True,True
+9424bf00-bb81-43ab-9fe2-7a3c5a238fc7,no there is no transparent dresser or wardrobe cabinet in the house,no,disjunction_colour,0.2097378969192505,0.9999999403953552,True,True
+ac7bb57d-a6d2-43a9-88a3-e9b6663832d4,no there is no blue ironing board in the house,no,existence_colour,0.1957921981811523,0.9999999403953552,True,True
+0f3d5f35-b2c4-4ec5-acc4-e8fd56ff8002,there are two white door handles in the house,five,count_colour,0.0166583545506,0.3750613331794739,False,False
+ba066f28-e90d-4805-a50a-dec1eb9f0382,the brown bag is located in the top room,['office'],location_colour,0.1962781250476837,0.3759527504444122,False,False
+2ffe3a8b-0dae-41e4-9e0b-bc9da8c8fa32,the orange sign is next to a door,"['door', 'notice_board']",spatial_colour,0.637006402015686,0.9999998807907104,True,True
+51fd7ffb-213a-4e22-ba22-666d19379e1f,no there is not a black painting and a black rubiks cube in the living room,yes,conjunction_colour_location,0.0269412752240896,0.6224743127822876,False,False
+f184c1f4-e74a-44a0-add6-fdcc81ada9d3,no there is a green armchair in the living room,yes,disjunction_colour_location,0.0244350731372833,0.6224743127822876,False,False
+e3a1d980-2ef7-45a6-ae95-abc157915ca7,no there is no white shower in the hallway,no,existence_colour_location,0.2146253287792205,0.9999999403953552,True,True
+f45e3365-5ae8-4854-a434-1e3434be6a3f,there are 3 black ottomans in the living room,one,count_colour_location,0.0133872777223587,0.5186835527420044,False,False
+5779068b-f8e8-428e-8990-ce56c4dec0a6,a blue and white spherical object is next to the white rubiks cube in the office,"['cup', 'book', 'teddy_bear']",spatial_colour_location,0.2126217186450958,0.4594278633594513,False,False
+ec769de5-01d4-4938-a168-46e0b2f81f49,no there is no lamp in the living room,yes,existence_location,0.007045351434499,0.6224743127822876,False,False
+84060e0a-7c57-4dd3-9407-cba949387f34,no the image does not show a chair and table,yes,conjunction_object,0.0485534109175205,0.6740613579750061,False,False
+a715aa2a-d165-4db5-b33f-f9902b0972ac,based solely on the image provided it is not possible to determine if there is a coffee machine or a dishwasher in the house the image does not show any appliances or kitchenware that would indicate the presence of such items to answer this question accurately one would need additional information or a different view of the space where these appliances might be located,no,disjunction_object,0.0275491178035736,0.6497524976730347,True,True
+e829cd45-dc87-41a5-81e5-43881c05861f,no there is no television visible in any of the images provided,no,existence_object,0.277718037366867,0.9999999403953552,True,True
+f4152985-d611-494d-a21e-95652f3cfddc,there is one tshirt in the house,one,count_object,0.260061115026474,1.0000001192092896,True,True
+9a44827f-c5ef-41dd-8c38-1b424b1d2e0f,the desk is located in a home office,"['living room', 'office']",location_object,0.694392204284668,1.0000001192092896,True,True
+e6af1953-0a74-48d0-bb09-3106a132c1fa,the bag is blue,"['brown', 'gray', 'blue', 'black', 'white']",colour_object,0.6267289519309998,1.0,True,True
+c195303d-0b7f-481a-bd2b-6420a0d2b863,there is no table visible in the image provided the main subject of the image is a brown purse hanging on a wall if you are referring to something else in the image please clarify so i can assist you better,"['vase', 'rubiks_cube', 'book', 'headphones', 'cup', 'teapot']",spatial_object,0.2536361217498779,0.494684487581253,False,False
+fd91d356-02a1-45eb-a62e-cc63ec2dcd98,no there is no mention of a teapot or a vase in the living room description,yes,conjunction_location,0.0092448955401778,0.6224743127822876,False,False
+8183239f-ce98-48f1-9353-cff34bb25f42,there is no bed or desk visible in the office,yes,disjunction_location,-0.0324610508978366,0.6224743127822876,False,False
+342fd0e3-f461-412c-92f0-6ed00e34c6b7,no there is no range oven in the office,no,existence_location,0.275900661945343,0.9999999403953552,True,True
+e9fde35d-4ec5-4d7c-a66d-5097c84cd96d,there are two plates in the office,zero,count_location,0.0723301470279693,0.2647105157375335,False,False
+b4c7983d-78b5-4032-beb1-01efcda209f7,the jacket in the office is blue,['beige'],colour_location,0.1940634697675705,0.4070758819580078,False,False
+20c5614b-a29e-4768-90a7-52b23662c238,a blue door is next to a white door in the living room,"['bag', 'shoes', 'sign', 'chair']",spatial_location,0.3011831641197204,0.4662127792835235,False,False
+337760b9-e960-4f37-803d-bb41423b0a82,no there is a black chair and a white lamp in the house,yes,conjunction_colour,0.0688738673925399,0.6224743127822876,False,False
+ee03291c-c0fa-400f-b5d1-a527e971684d,there is a wooden desk in the house,yes,disjunction_colour,0.0109295677393674,0.6224743127822876,False,True
+bd20ef0b-38c0-47c1-9c04-6566d18e0697,yes there is a white door handle in the house,yes,existence_colour,0.2572831213474273,1.0,True,True
+3b686191-7607-4c74-8a01-0b1805da3daf,none,zero,count_colour,0.5794321894645691,0.5794321894645691,False,True
+9dbcf2c9-d316-486c-b141-143ab4b52cba,the black chair is located in a room that appears to be an office or study as suggested by the presence of a desk and computer,['office'],location_colour,0.5679870843887329,1.0000001192092896,True,True
+61f338fe-ebee-4f1f-abaa-afd78a59cb17,the description does not specify the content on the brown sofa so a precise answer cannot be provided,"['bag', 'teddy_bear']",spatial_colour,0.1356840878725052,0.2684546411037445,False,False
+9258251d-309f-4720-8781-a36babc75035,no the living room features a gray lamp and a brown sofa,no,conjunction_colour_location,0.1689468175172805,0.9999999403953552,True,True
+b4920c12-9e72-4291-97d1-9d5650cf9e34,there is a white fruit bowl in the living room,yes,disjunction_colour_location,0.084039606153965,0.6224743127822876,False,False
+75bbbfbb-3f69-40bf-898a-27d2221c00a3,no there is no orange rubiks cube mentioned in the description of the office,yes,existence_colour_location,0.0455211624503135,0.6224743127822876,False,False
+2e6ba275-1f6d-4110-859b-acc701307115,there are two black paintings in the living room,one,count_colour_location,0.0756396874785423,0.6104679107666016,False,False
+31cb7aa9-bfda-4fc4-b7b6-fbdb6f99969c,below the green rubiks cube is a white shelf with various trophies on it,"['desk', 'trophy', 'table']",spatial_colour_location,0.5270090699195862,0.8804340958595276,False,True
+9068e419-5a33-4d96-a210-0c394e3427d3,0,zero,count_colour,0.8219069242477417,0.8219069242477417,False,False
+9ecf4fe7-2f3b-4cef-873b-b8cd3bb0a5eb,yes there is a teapot and a vase in the house,yes,conjunction_object,0.1630937755107879,1.0,True,True
+cc75e70a-2e25-4911-839c-113712339d6c,there is no kettle or vase in the house,yes,disjunction_object,-0.0117554906755685,0.6224743127822876,False,False
+a9cd87a0-47a9-475a-bc6f-a1a0ac48ced8,no there is no wine glass in the house,yes,existence_object,0.080831691622734,0.6224743127822876,False,False
+464ed547-71c5-4f53-9815-88f88d690e69,there are 9 chairs in the house,five,count_object,0.1940017789602279,0.4572153687477112,False,False
+a2444c55-c914-4ce5-b407-6424a3d17fa7,the book is located in an office,"['living room', 'office']",location_object,0.6317223310470581,1.0000001192092896,True,True
+e6af1953-0a74-48d0-bb09-3106a132c1fa,the bag in the image is black it is situated on a table in the righthand photograph close to the edge of the frame due to the angle and distance specific details about the bags material or design are not discernible from this image alone,"['brown', 'gray', 'blue', 'black', 'white']",colour_object,0.3259842991828918,0.9999998807907104,True,True
+8a2f00d5-daad-4167-a700-c8e8b2a8dd0b,next to the cup there is a rubiks cube the rubiks cube is a 3d combination puzzle that consists of a cube made up of smaller cubes each face of which is colored differently the objective of the puzzle is to realign the colors on each face to create a uniformly colored cube in this image the rubiks cube appears to be in a partially solved state with some faces having their colors aligned and others not,"['vase', 'book', 'rubiks_cube', 'teapot']",spatial_object,0.7625119686126709,0.7994687557220459,False,True
+e561648a-b2e1-4263-89f5-0d71948a9614,no there is no refrigerator and washer in the living room,no,conjunction_location,0.2507721781730652,0.9999999403953552,True,True
+98195da9-81bb-4dcc-8dc2-51608d3b1ff0,no there is no dishwasher or food processor in the office,no,disjunction_location,0.2712588012218475,0.9999999403953552,True,True
+5949db9f-707f-4dfe-a9c3-2b2b6874f63f,no there is no shower in the office,no,existence_location,0.2577804923057556,0.9999999403953552,True,True
+c92f818b-15b5-4b9b-ada7-22264939497a,there are two chairs in the living room,three,count_location,0.0474797561764717,0.4540674686431885,False,False
+9b9644ea-b277-4182-94c3-3d80767289c1,the ottoman in the living room is brown,"['wooden', 'black']",colour_location,0.2104164510965347,0.3424436151981354,False,False
+4a33cbe6-00fc-4457-b290-6e135c4079bc,a white desk with a red apple and a rubiks cube is next to the chair in the living room,"['ottoman', 'door', 't-shirt', 'desk', 'chair']",spatial_location,0.5362831354141235,1.0000001192092896,True,True
+84d27934-9542-4f05-aba4-77f4bc3b352f,yes,yes,conjunction_colour,1.0,1.0,True,True
+0c16ca0d-a6a5-4fe7-bfd3-539f6831185b,no there is a blue chair and a white wardrobe cabinet in the house,yes,disjunction_colour,-0.0322776846587657,0.6224743127822876,False,False
+5c1d9d04-068d-4e07-83c6-b73b08306a9c,yes there is a blue ball in the house,yes,existence_colour,0.1795392483472824,1.0,True,True
+caeb11f6-11ac-47f6-aaf3-6037cffe8841,there are 15 white doors in the house,two,count_colour,0.0721467435359954,0.4524684846401214,False,False
+585a0e4b-63fb-43cb-ba57-81b20531aa25,the brown wine bottle is located in the top middle room,['office'],location_colour,0.1406264156103134,0.3759527504444122,False,False
+9e346dda-cde8-4919-9dd0-94a35c8de330,there is a chair next to the blue door,"['bag', 'chair', 'notice_board', 'shoes', 'sign']",spatial_colour,0.7309053540229797,1.0000001192092896,True,True
+d972b6d9-3132-4992-9c31-094257a316c3,no there is no black rubiks cube in the living room,yes,conjunction_colour_location,0.0447739250957965,0.6224743127822876,False,False
+8e40b5de-5c32-4b10-a9ca-c6283c8316c9,no there is not a silver fish tank or a silver wine bottle in the living room,no,disjunction_colour_location,0.1937858462333679,0.9999999403953552,True,True
+8db8273b-5751-4573-9d70-db0d1d9b63e1,no there is no transparent kettle in the hallway,no,existence_colour_location,0.2503839135169983,0.9999999403953552,True,True
+845c7f95-cc2c-4f9b-b8f3-040e47ab518b,there are 5 wooden showers in the living room,zero,count_colour_location,0.0180390141904354,0.3869909346103668,False,False
+835e8185-38d0-4702-a096-5e1ab64c7345,there is no red rubiks cube visible in the image therefore it is not possible to determine what is below it,['desk'],spatial_colour_location,0.1322894096374511,0.3361315727233886,False,False
+bc000d7d-1b52-4339-918b-e668f6077265,no there is not a brown bag or a brown bathtub in the living room,yes,disjunction_colour_location,0.0154736852273345,0.6224743127822876,False,False
+619e5851-8435-4c0b-abe6-1271afc4fe2a,no there is a kettle but no wine bottle,no,conjunction_object,0.3932245969772339,0.9999999403953552,True,True
+12d2c2ac-08b7-4d53-a436-ccdc1d022bad,no,no,disjunction_object,0.9999999403953552,0.9999999403953552,True,True
+a4e01ea5-bbe2-45a0-8272-5338f8bf788f,yes,no,existence_object,0.3410777747631073,0.3410777747631073,False,False
+dab3c380-610b-452c-b7d1-6c99f7eb2235,there are 5 bathtubs in the house,zero,count_object,0.0336090475320816,0.3869909346103668,False,False
+8ddddcbd-cbff-403b-b123-91dbc6f2c5b9,the teapot is located in the bottom right room,['living room'],location_object,0.3548595905303955,0.6008291244506836,False,False
+6f91529d-d89b-4ac2-aaae-17ffa4a93fc8,the robot in the image is primarily silver with black accents,"['silver', 'white']",colour_object,0.4616843461990356,1.0,True,True
+f925ae6e-1896-4a89-8045-ecac93ab78bc,the answer cannot be determined from the provided image description,['table'],spatial_object,0.0932895541191101,0.2948273420333862,False,False
+00ad963c-3210-4c09-921e-a75949d04487,no there is a cup but the wine glass is actually a decanter with two cups in the living room,yes,conjunction_location,0.0770399644970893,0.6224743127822876,False,False
+e6144fde-44d7-4c03-81f5-d9bfdfb66041,no there is no fish tank or vase visible in any of the office images,no,disjunction_location,0.2701219618320465,0.9999999403953552,True,True
+8d6bdf1f-0d23-4b8b-a07b-5b6abead1ca8,yes there is a wine glass in the living room on the table,yes,existence_location,0.1207741275429725,1.0,True,True
+22d152bd-cfc9-43f1-8630-3aa1a1eeb403,there are three mirrors in the hallway,zero,count_location,-0.0593662522733211,0.2647105157375335,False,False
+e9bd990b-79e4-4483-81ee-ad30c5b64211,the ball in the living room is white and black,['white'],colour_location,0.2400392293930053,1.0000001192092896,True,True
+12aef841-0fa8-4411-b152-b712da0a16e5,above the vase in the living room is a painting,['robot'],spatial_location,0.0600841417908668,0.2793616652488708,False,False
+e7de9329-4c04-4cd9-8382-6b990e6e3332,no there is a blue bag but the wine glass is clear,yes,conjunction_colour,0.0336068235337734,0.6224743127822876,False,False
+7041f7d0-1323-4ffd-9f82-126890c7babc,no there is no purple fruit bowl or purple vase in the house,no,disjunction_colour,0.250697374343872,0.9999999403953552,True,True
+2abbb1e3-a212-40b0-b3f7-338d2507d8f2,no there is no white bookshelf in the house,yes,existence_colour,0.1015832424163818,0.6224743127822876,False,False
+70b7928c-e807-48be-9e77-1030c030e39e,there are three silver pianos in the house,zero,count_colour,-0.0242062341421842,0.2647105157375335,False,False
+9f926753-4e19-4a58-babe-fd56ddd512cc,its not possible to determine the specific room the painting is in based on the provided information,['living room'],location_colour,0.2476404011249542,0.6008291244506836,False,False
+9e346dda-cde8-4919-9dd0-94a35c8de330,a blue chair is next to the blue door,"['bag', 'chair', 'notice_board', 'shoes', 'sign']",spatial_colour,0.6913276314735413,1.0000001192092896,True,True
+3d2480af-6a60-4bd4-966e-d5f10e1c4b91,no,no,conjunction_colour_location,0.9999999403953552,0.9999999403953552,True,False
+ee67ba37-be0e-43eb-b35c-09ec23705956,there is a transparent wine glass in the living room on the right side of the image,yes,disjunction_colour_location,0.0080736316740512,0.6393542885780334,False,True
+f88877cf-65a8-4eb7-b26a-81d36863b67b,no there is no transparent shower in the living room,no,existence_colour_location,0.1515011191368103,0.9999999403953552,True,False
+41c13f20-8bda-44c1-86a4-a4f47276ec49,there are two orange wine glasses in the living room,zero,count_colour_location,-0.0889620184898376,0.2647105157375335,False,False
+c563f84a-9d04-4e9d-878d-4e1760b6b22d,there are brown pillows and a teddy bear on the brown sofa in the living room,"['bag', 'teddy_bear']",spatial_colour_location,0.3777010142803192,0.8543397188186646,False,True
+5bc4ac9a-a377-4ef3-b39e-01ce8be8b1ac,no there is no toilet in the hallway,no,existence_location,0.3321899771690368,0.9999999403953552,True,True
