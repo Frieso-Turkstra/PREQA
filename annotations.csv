@@ -1,0 +1,667 @@
+uid,filename,bbox_count,bbox_id,x1,y1,x2,y2,occlusion,label,object_id,wordnet_sense,location,colour,on,above,below,next_to
+b2b43078-a345-4a33-ab33-14143f877ec2,0-0-0.jpg,6,0,712,46,800,97,none,cup,20,cup.n.01,office,['white'],[],[],[21],"[61, 9]"
+35cf69e1-6e43-4cfe-8b60-244fe1a7ec2f,0-0-0.jpg,6,1,632,31,674,70,none,rubiks_cube,61,toy.n.01,office,"['blue', 'red', 'yellow', 'green', 'orange', 'white']",[],[],[21],"[9, 20, 77]"
+d9915931-f7eb-48d5-856f-f3680c0af323,0-0-0.jpg,6,2,189,1,256,104,partial,wine_bottle,86,wine-bottle.n.01,office,['brown'],[],[],[21],"[77, 9]"
+ff638a06-cdb4-470e-9e54-320fd4287f5f,0-0-0.jpg,6,3,393,0,498,69,partial,teddy_bear,77,teddy.n.01,office,['orange'],[],[],[21],"[9, 61, 86]"
+d4a21533-3ad9-4d95-a223-566696ea64ee,0-0-0.jpg,6,4,455,65,630,113,none,book,9,book.n.02,office,['blue'],[],[],[21],"[20, 61, 77, 86]"
+6ff89c59-d6ad-4524-8d13-a3f466a53f36,0-0-0.jpg,6,5,22,53,965,522,partial,desk,21,desk.n.01,office,['wooden'],"[86,77,61,9,20]","[82, 84]",[],[16]
+3a447e6a-c537-4625-992a-b5e5cb684af7,0-0-1.jpg,8,0,232,197,285,387,none,wine_bottle,86,wine-bottle.n.01,office,['brown'],[],[],[21],"[77, 9]"
+5e0fe3c9-5fa3-46b4-8830-74e5f1ba0505,0-0-1.jpg,8,1,414,255,503,355,none,teddy_bear,77,teddy.n.01,office,['orange'],[],[],[21],"[9, 61, 86]"
+c51932c9-00ec-46c3-a57d-45d55f427276,0-0-1.jpg,8,2,626,324,663,355,none,rubiks_cube,61,toy.n.01,office,"['blue', 'red', 'yellow', 'green', 'orange', 'white']",[],[],[21],"[9, 20, 77]"
+a879be87-52dd-451f-bd98-c513225b3a71,0-0-1.jpg,8,3,696,334,776,380,none,cup,20,cup.n.01,office,['white'],[],[],[21],"[61, 9]"
+85f39d92-eea7-4d40-a2d7-a731163d252c,0-0-1.jpg,8,4,463,351,626,402,none,book,9,book.n.02,office,['blue'],[],[],[21],"[20, 61, 77, 86]"
+3d53e197-e121-40b0-a33e-658d9ff5b7a1,0-0-1.jpg,8,5,602,1,782,257,partial,window,82,window.n.01,office,['transparent'],[],[],[21],[84]
+d0269af9-72ca-4a22-ac0b-3ebebf0cd205,0-0-1.jpg,8,6,373,1,570,278,partial,window,84,window.n.01,office,['transparent'],[],[],[21],[82]
+041cb12d-c29d-4de2-a7d9-a27ea6ddd4c4,0-0-1.jpg,8,7,62,340,935,519,partial,desk,21,desk.n.01,office,['wooden'],"[86,77,61,9,20]","[82, 84]",[],[16]
+402505ba-7ccf-46ae-8d71-d7f047e16e11,0-0-2.jpg,2,0,371,202,571,520,partial,window,84,window.n.01,office,['transparent'],[],[],[21],[82]
+abafa3be-c3b8-4a71-9b1e-9486daacf68b,0-0-2.jpg,2,1,591,184,789,521,partial,window,82,window.n.01,office,['transparent'],[],[],[21],[84]
+b1321f5b-7f1f-478b-9205-dacdcde40bfa,0-1-0.jpg,1,0,505,402,626,519,none,ball,8,ball.n.01,office,['blue'],[],[5],[],[]
+56f28474-7cfd-4f06-8cd4-9df5e0130d3f,0-1-1.jpg,1,0,373,2,535,212,partial,bag,5,bag.n.04,office,['brown'],[],[],[8],[]
+9fb2893b-ce5e-4c71-b6a0-391f5d89b5a0,0-1-2.jpg,1,0,384,131,535,465,none,bag,5,bag.n.04,office,['brown'],[],[],[8],[]
+022508f6-b287-4050-bbfe-5263165105da,0-2-0.jpg,5,0,150,48,418,367,none,chair,14,chair.n.01,office,['blue'],[],[],[],[4]
+1ec86a41-bd46-4ed0-a2d2-1279fcb446a5,0-2-0.jpg,5,1,533,0,639,100,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+5d1f55ee-45f1-4dcf-a046-35a3acb127ae,0-2-0.jpg,5,2,645,1,822,207,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+0cd32574-e217-4c93-b2c4-b065dbc27da0,0-2-0.jpg,5,3,357,0,467,196,partial,box,11,box.n.01,office,['brown'],[],[],[],[4]
+8eb32735-f57e-4392-9165-4c90442f241d,0-2-0.jpg,5,4,360,89,460,192,partial,bag,4,bag.n.04,office,['white'],[],[],[],"[11, 14]"
+50331a19-bce5-4141-9b1e-d07b8d10397b,0-2-1.jpg,9,0,948,0,1045,307,none,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+cd0a191c-570f-4f44-b441-9a8bfe9da653,0-2-1.jpg,9,1,358,387,467,490,partial,bag,4,bag.n.04,office,['white'],[],[],[],"[11, 14]"
+187c1d28-9f22-4874-83d8-a1f569928862,0-2-1.jpg,9,2,375,283,477,480,partial,box,11,box.n.01,office,['brown'],[],[],[],[4]
+c389400f-bd51-435c-bddf-08209e708bd0,0-2-1.jpg,9,3,536,160,634,397,none,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+37a8d42b-7f56-42a5-8664-7ba48ca9eb08,0-2-1.jpg,9,4,651,51,795,498,none,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+8543f6ad-345a-452e-8d9c-3f93188efef9,0-2-1.jpg,9,5,183,350,409,522,partial,chair,14,chair.n.01,office,['blue'],[],[],[],[4]
+fd3dbbe8-cc44-446e-b785-329ef9cca04e,0-2-1.jpg,9,6,503,125,590,141,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+958abae7-832c-41f4-aaf6-329c1c6d59a2,0-2-1.jpg,9,7,609,279,631,302,none,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+981ed050-95e4-4b4b-a0ff-730d5954d714,0-2-1.jpg,9,8,747,265,786,302,none,door_handle,31,doorhandle.n.01,office,['white'],[],[],[],[]
+1caa4921-9896-4602-8afc-d0e746228935,0-2-2.jpg,5,0,433,114,744,172,none,lamp,45,lamp.n.02,office,['white'],[],[],[],[]
+c7e24656-87f1-4b18-9df2-fcd5deb879c2,0-2-2.jpg,5,1,538,402,634,523,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+f441e7d2-412b-4b20-abab-6664efb7cf30,0-2-2.jpg,5,2,644,305,808,520,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+5f08a018-1f69-49d2-a9d3-171e2979df98,0-2-2.jpg,5,3,916,239,1035,521,none,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+987909f0-6e87-46f5-be9c-fb20b3235f81,0-2-2.jpg,5,4,505,370,590,385,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+22896ca7-3306-4de0-982e-1c57503b2854,0-3-0.jpg,1,0,545,2,1076,517,partial,chair,16,chair.n.01,office,"['blue', 'black']",[],[],[],[21]
+2a4e05c5-6577-4a1f-bae3-fc63157eb9c1,0-3-1.jpg,1,0,506,242,1001,521,partial,chair,16,chair.n.01,office,"['blue', 'black']",[],[],[],[21]
+230a5b41-9237-4244-93e9-b4550e9d2ae6,0-3-2.jpg,1,0,3,235,50,427,partial,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+03502e79-e2e0-4413-9f78-3164d01f488a,1-0-0.jpg,8,0,772,220,842,290,none,ball,8,ball.n.01,office,['blue'],[],[5],[],[]
+0c21cbcf-f394-4f4d-80bf-85e3f1d3e985,1-0-0.jpg,8,1,599,12,617,27,none,rubiks_cube,61,toy.n.01,office,"['blue', 'red', 'yellow', 'green', 'orange', 'white']",[],[],[21],"[9, 20, 77]"
+a712955d-c0d4-43bf-a1ec-fbec73904f06,1-0-0.jpg,8,2,624,12,654,31,none,cup,20,cup.n.01,office,['white'],[],[],[21],"[61, 9]"
+94a14f6b-724e-4a66-adce-55e8a9bf813f,1-0-0.jpg,8,3,532,16,594,34,none,book,9,book.n.02,office,['blue'],[],[],[21],"[20, 61, 77, 86]"
+29e16a01-95db-471d-b3d3-b30b8010a939,1-0-0.jpg,8,4,501,0,542,24,partial,teddy_bear,77,teddy.n.01,office,['orange'],[],[],[21],"[9, 61, 86]"
+0324b446-19a1-4b42-99f0-6800391348e3,1-0-0.jpg,8,5,441,0,460,31,partial,wine_bottle,86,wine-bottle.n.01,office,['brown'],[],[],[21],"[77, 9]"
+21c75c01-c7c9-47e5-924e-1d9ad4516d7e,1-0-0.jpg,8,6,399,21,695,212,partial,desk,21,desk.n.01,office,['wooden'],"[86,77,61,9,20]","[82, 84]",[],[16]
+112564d3-d26d-4b40-b01e-f91dd9ccf890,1-0-0.jpg,8,7,228,0,461,290,partial,chair,16,chair.n.01,office,"['blue', 'black']",[],[],[],[21]
+5bf2c69d-152c-44dc-9fa7-71decbb51298,1-0-1.jpg,10,0,808,56,847,258,none,bag,5,bag.n.04,office,['brown'],[],[],[8],[]
+8f5d1118-da97-47ce-ae6c-bfb8a74a236d,1-0-1.jpg,10,1,589,102,677,294,none,window,82,window.n.01,office,['transparent'],[],[],[21],[84]
+9e29aabe-45e7-4d5c-920e-b8aecba24ece,1-0-1.jpg,10,2,455,270,472,340,none,wine_bottle,86,wine-bottle.n.01,office,['brown'],[],[],[21],"[77, 9]"
+9ab897f6-4613-44de-8928-ffcabe7e5f75,1-0-1.jpg,10,3,619,322,647,339,none,cup,20,cup.n.01,office,['white'],[],[],[21],"[61, 9]"
+4c86fef0-47a1-4047-946e-b4ba51b4fb76,1-0-1.jpg,10,4,595,320,612,335,none,rubiks_cube,61,toy.n.01,office,"['blue', 'red', 'yellow', 'green', 'orange', 'white']",[],[],[21],"[9, 20, 77]"
+f22dd4cb-504b-42f4-98d3-989751e41ad5,1-0-1.jpg,10,5,506,290,547,338,none,teddy_bear,77,teddy.n.01,office,['orange'],[],[],[21],"[9, 61, 86]"
+335113e0-8d48-4709-8288-5903f6cb6f57,1-0-1.jpg,10,6,538,329,590,341,none,book,9,book.n.02,office,['blue'],[],[],[21],"[20, 61, 77, 86]"
+21b968ca-5425-43b3-8f72-e7500ba1d19b,1-0-1.jpg,10,7,473,102,572,303,none,window,84,window.n.01,office,['transparent'],[],[],[21],[82]
+c3330edd-2e6a-4a60-83e6-28ff28dcd7cc,1-0-1.jpg,10,8,257,276,443,522,partial,chair,16,chair.n.01,office,"['blue', 'black']",[],[],[],[21]
+c23e832a-31ea-4821-8555-ac7ab3ade2fb,1-0-1.jpg,10,9,411,329,687,506,partial,desk,21,desk.n.01,office,['wooden'],"[86,77,61,9,20]","[82, 84]",[],[16]
+840fedc7-f9cd-4027-b7ed-a1eb2bcdfd6e,1-0-2.jpg,4,0,392,186,659,242,none,lamp,46,lamp.n.02,office,['white'],[],[],[],[]
+a0c595c8-875e-43e1-92e4-ce10e37a57f4,1-0-2.jpg,4,1,796,314,849,510,none,bag,5,bag.n.04,office,['brown'],[],[],[8],[]
+e438ff75-df3f-4346-bd9a-28adda63b563,1-0-2.jpg,4,2,587,358,687,520,partial,window,82,window.n.01,office,['transparent'],[],[],[21],[84]
+f6f90b77-6f74-4c2b-9572-1aaefe690c46,1-0-2.jpg,4,3,469,358,577,521,partial,window,84,window.n.01,office,['transparent'],[],[],[21],[82]
+c1e4f4ec-34fd-446e-8947-fca609e8e73f,1-1-0.jpg,2,0,140,68,591,520,partial,chair,14,chair.n.01,office,['blue'],[],[],[],[4]
+e9ba18dd-19d1-4e4b-9297-9cedfe975420,1-1-0.jpg,2,1,910,237,1079,519,partial,bag,4,bag.n.04,office,['white'],[],[],[],"[11, 14]"
+47f8eab6-f1d3-4fe5-88f2-a184e17e2703,1-1-1.jpg,1,0,179,395,584,521,partial,chair,14,chair.n.01,office,['blue'],[],[],[],[4]
+086110fa-66d6-4759-a9c1-bc152a6ff978,1-2-0.jpg,4,0,482,0,636,140,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+35128a9f-81b7-4791-bdeb-93c6fb28df85,1-2-0.jpg,4,1,672,1,1078,471,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+6a92e053-b886-4b4e-a4ea-ab027cc617af,1-2-0.jpg,4,2,9,238,262,452,none,bag,4,bag.n.04,office,['white'],[],[],[],"[11, 14]"
+9a53d95b-950b-4fc7-9b2a-0b11c8949d2d,1-2-0.jpg,4,3,2,1,336,399,partial,box,11,box.n.01,office,['brown'],[],[],[],[4]
+baabaa7c-9232-4983-ba0f-b3b07abc59ae,1-2-1.jpg,7,0,50,271,317,523,partial,box,11,box.n.01,office,['brown'],[],[],[],[4]
+7a55a254-094b-49b4-93c0-126654fdf1a1,1-2-1.jpg,7,1,387,6,565,42,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+691a3140-6a19-4ac2-a8f4-36dc60c30cc1,1-2-1.jpg,7,2,680,0,1079,521,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+3b35717d-8eaa-4423-a961-8c432048c739,1-2-1.jpg,7,3,488,91,630,441,none,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+966baeed-dc4e-405f-9b27-ef9e960465a7,1-2-1.jpg,7,4,636,174,666,193,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+d1a7f2c6-817a-4f4a-81e6-b1951d46f308,1-2-1.jpg,7,5,597,271,626,305,none,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+822ebd9a-5140-4cf6-8da3-fee718808eb0,1-2-1.jpg,7,6,973,206,1078,305,none,door_handle,31,doorhandle.n.01,office,['white'],[],[],[],[]
+dc3c709e-5363-4de8-a084-dfb5f88ed320,1-2-2.jpg,5,0,486,348,631,521,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+e31fffe6-f45a-4afb-8473-f5310bc73ff0,1-2-2.jpg,5,1,401,276,564,306,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+ac9691c1-b7a1-455b-976d-3efb910d5d96,1-2-2.jpg,5,2,658,28,1079,520,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+711cffb1-dec0-4076-80cc-9a2f7fed3adc,1-2-2.jpg,5,3,968,449,1074,520,partial,door_handle,31,doorhandle.n.01,office,['white'],[],[],[],[]
+a872d630-adf5-4404-9910-a00e2f9f71d6,1-2-2.jpg,5,4,639,427,669,449,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+ade8f86f-fa54-43d2-a536-b010e1b18409,1-3-0.jpg,1,0,1,2,150,494,severe,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+b334228a-ac63-4aa8-804c-27e3baff0d6f,1-3-1.jpg,3,0,2,0,93,520,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+d07878a1-8283-47a0-8f50-857b030035a3,1-3-1.jpg,3,1,612,4,825,326,partial,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+9a81721a-b2f0-49e5-929d-1018095291d4,1-3-1.jpg,3,2,2,237,52,329,partial,door_handle,31,doorhandle.n.01,office,['white'],[],[],[],[]
+07c87f2a-9526-4954-bdc3-a2e4cc67a663,1-3-2.jpg,3,0,613,194,822,521,partial,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+872b4f1e-c34d-4538-836c-8d0ebf25a481,1-3-2.jpg,3,1,0,19,204,520,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+6eb1c3e2-45e1-4153-aecb-e11e45b5e748,1-3-2.jpg,3,2,2,473,60,521,partial,door_handle,31,doorhandle.n.01,office,['white'],[],[],[],[]
+c38d698e-8bc7-4721-8946-e09cbb6df194,2-0-0.jpg,5,0,639,19,772,210,none,chair,14,chair.n.01,office,['blue'],[],[],[],[4]
+d53ff292-844f-49fe-a348-7b18e5cf6e6c,2-0-0.jpg,5,1,405,0,501,129,partial,chair,16,chair.n.01,office,"['blue', 'black']",[],[],[],[21]
+5318c940-49ab-45a4-93a3-757bff8b66b6,2-0-0.jpg,5,2,471,7,619,112,partial,desk,21,desk.n.01,office,['wooden'],"[86,77,61,9,20]","[82, 84]",[],[16]
+e33fbd84-31a4-4bb9-9cb9-6adb8521758e,2-0-0.jpg,5,3,735,198,776,313,severe,bag,4,bag.n.04,office,['white'],[],[],[],"[11, 14]"
+03ed6a85-3878-44ef-b6eb-8af3f7cd1f41,2-0-0.jpg,5,4,237,1,348,438,severe,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+7a90ec1f-92c1-461a-886f-20a166384ed6,2-0-1.jpg,11,0,458,99,610,124,none,lamp,46,lamp.n.02,office,['white'],[],[],[],[]
+bf7d0d17-1481-492e-8e1e-ceafea7616f2,2-0-1.jpg,11,1,306,129,362,300,none,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+f799ee5c-3915-4cb0-8e7a-a2952acc1d2e,2-0-1.jpg,11,2,635,319,756,498,none,chair,14,chair.n.01,office,['blue'],[],[],[],[4]
+c56c52e5-4fbf-4800-86f7-67358da65e7e,2-0-1.jpg,11,3,572,180,620,288,none,window,82,window.n.01,office,['transparent'],[],[],[21],[84]
+3fa489e4-4afd-4f58-af24-e124ad329d66,2-0-1.jpg,11,4,503,178,561,292,none,window,84,window.n.01,office,['transparent'],[],[],[21],[82]
+71321293-6618-495e-8d1a-48c288993f12,2-0-1.jpg,11,5,417,283,498,410,none,chair,16,chair.n.01,office,"['blue', 'black']",[],[],[],[21]
+e5bd2f78-5229-4c9a-bf9b-ee1083d10d24,2-0-1.jpg,11,6,482,305,613,407,partial,desk,21,desk.n.01,office,['wooden'],"[86,77,61,9,20]","[82, 84]",[],[16]
+42124442-d162-48f9-ae34-c64e444d4f63,2-0-1.jpg,11,7,670,181,678,275,none,bag,5,bag.n.04,office,['brown'],[],[],[8],[]
+0a4b0c0c-f1a7-47b0-acc8-e0fd2628be7d,2-0-1.jpg,11,8,282,1,310,520,severe,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+63ac1d31-c926-4e35-a57f-23bf59df0fae,2-0-1.jpg,11,9,496,278,508,317,none,wine_bottle,86,wine-bottle.n.01,office,['brown'],[],[],[21],"[77, 9]"
+977b453e-c341-43ea-943e-999be86816f0,2-0-1.jpg,11,10,524,288,545,315,none,teddy_bear,77,teddy.n.01,office,['orange'],[],[],[21],"[9, 61, 86]"
+35961b40-dcf7-419d-97b4-010adc79738f,2-0-2.jpg,8,0,404,225,646,269,none,lamp,45,lamp.n.02,office,['white'],[],[],[],[]
+814f44ee-8329-4465-affa-01aad85346da,2-0-2.jpg,8,1,308,392,350,521,partial,jacket,39,jacket.n.01,office,['beige'],[],[],[],[]
+35b1f26c-96ed-4635-9ec5-7b18fdec2783,2-0-2.jpg,8,2,461,362,606,385,none,lamp,46,lamp.n.02,office,['white'],[],[],[],[]
+81877519-432a-4676-96b2-d60509c717b7,2-0-2.jpg,8,3,572,439,624,520,partial,window,82,window.n.01,office,['transparent'],[],[],[21],[84]
+147f33a6-247a-489c-b1e8-3ac1d8dab13c,2-0-2.jpg,8,4,502,438,561,523,partial,window,84,window.n.01,office,['transparent'],[],[],[21],[82]
+a89f7b2d-79de-4165-b98c-f9e61528f513,2-0-2.jpg,8,5,775,155,862,202,none,sign,69,sign.n.02,hallway,['orange'],[],[],[],[29]
+e1d65685-1cf3-40d8-b0ea-6d3cee795f10,2-0-2.jpg,8,6,667,445,683,521,partial,bag,5,bag.n.04,office,['brown'],[],[],[8],[]
+4d249d3f-96c9-4aaf-b8e1-5303cd368920,2-0-2.jpg,8,7,286,77,375,521,severe,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+d0d0a386-028b-4f9e-809e-cb6f9f296f3e,2-1-0.jpg,5,0,755,1,876,248,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+5129a291-5821-4462-ace3-d2fb3b3edadd,2-1-0.jpg,5,1,545,1,642,87,partial,door,28,door.n.01,hallway,['white'],[33],[64],[],"[23, 72]"
+9cf71dc2-02f5-41fd-aab5-5f2160c4f1d7,2-1-0.jpg,5,2,447,2,545,89,partial,door,23,door.n.01,hallway,['white'],[],[64],[],"[28, 33]"
+f2409efb-98eb-449c-b45f-7b286b01bc94,2-1-0.jpg,5,3,228,68,317,138,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+3ec1621e-1bbe-40de-a789-87d4a11a1336,2-1-0.jpg,5,4,213,0,247,58,severe,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+e8c65ff4-7168-4cf2-9563-c1e7ac8afe84,2-1-1.jpg,14,0,517,87,568,156,none,lamp,40,lamp.n.02,hallway,['white'],[],[],[],[64]
+28288674-46d1-4a99-a295-e8d9aa7100de,2-1-1.jpg,14,1,547,190,634,394,none,door,28,door.n.01,hallway,['white'],[33],[64],[],"[23, 72]"
+83bcf4b5-b30d-4671-a77e-869c4a4df1fe,2-1-1.jpg,14,2,458,191,543,394,none,door,23,door.n.01,hallway,['white'],[],[64],[],"[28, 33]"
+43baac8f-d9f4-4e04-aa0a-241d6f827366,2-1-1.jpg,14,3,749,2,845,520,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+b689e43b-96e5-45f3-bd51-1d34cb6eefd7,2-1-1.jpg,14,4,252,374,327,439,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+bb346be8-e83f-4a01-b401-357792c29ab2,2-1-1.jpg,14,5,277,203,325,251,partial,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+b214da82-50b8-4b9c-97c5-9d7deec2181b,2-1-1.jpg,14,6,251,284,278,360,partial,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+4d9bfbbe-516c-4de5-9265-971dd501da42,2-1-1.jpg,14,7,387,167,433,329,none,notice_board,55,board.n.05,hallway,['gray'],[],[],[],[70]
+70563b99-7de2-4d02-b519-f65c17f01d8b,2-1-1.jpg,14,8,812,260,845,277,partial,door_handle,32,doorhandle.n.01,hallway,['white'],[],[],[],[]
+b515df1f-c787-4d0a-8bbb-593963f86285,2-1-1.jpg,14,9,835,45,870,97,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+fde3ab48-cf50-4a94-99f3-4eb46892454a,2-1-1.jpg,14,10,549,258,560,299,none,door_handle,33,doorhandle.n.01,hallway,['blue'],[],[],[],[23]
+f22d7719-c9ba-4ac7-977d-94e5cecfc9fd,2-1-1.jpg,14,11,526,166,556,182,none,sign,64,sign.n.02,hallway,['green'],[],[],"[23, 28]",[40]
+b3673d41-0ece-4d92-a6c7-83ef5c996846,2-1-1.jpg,14,12,348,156,363,180,none,sign,70,sign.n.02,hallway,['orange'],[],[],[],"[26, 55]"
+312d417a-fe4c-48b5-bbf8-2e3d4ca604a2,2-1-1.jpg,14,13,595,220,612,232,none,sign,66,sign.n.02,hallway,['green'],[],[],[],[]
+952e59d1-e49a-41be-b3bf-ad04ebefd471,2-1-2.jpg,12,0,488,1,603,84,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+b6fdfe4d-def2-4c87-815f-1d54957188e8,2-1-2.jpg,12,1,520,346,566,404,none,lamp,40,lamp.n.02,hallway,['white'],[],[],[],[64]
+b716bfa6-c94b-40d0-8142-15934f0fd125,2-1-2.jpg,12,2,730,223,851,519,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+457dccaf-90ec-4c6f-8e6a-406863594987,2-1-2.jpg,12,3,548,443,634,520,partial,door,28,door.n.01,hallway,['white'],[33],[64],[],"[23, 72]"
+5296c9d8-ada5-471b-b9cd-f98d66c87d9b,2-1-2.jpg,12,4,456,443,545,522,partial,door,23,door.n.01,hallway,['white'],[],[64],[],"[28, 33]"
+b74952ac-d952-4218-ac2b-4231a4722dfc,2-1-2.jpg,12,5,381,423,431,522,partial,notice_board,55,board.n.05,hallway,['gray'],[],[],[],[70]
+a1f1e635-5b34-469f-a619-16cf09519981,2-1-2.jpg,12,6,267,457,327,505,partial,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+8d650ae7-b6bc-4d18-a077-94a0ec1abcbb,2-1-2.jpg,12,7,817,307,848,354,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+93cf484f-8377-4e97-8b48-14567fb9351e,2-1-2.jpg,12,8,2,77,59,170,partial,sign,69,sign.n.02,hallway,['orange'],[],[],[],[29]
+5ec94f4d-2e86-4f99-93e7-4e14407ebba3,2-1-2.jpg,12,9,348,410,365,435,none,sign,70,sign.n.02,hallway,['orange'],[],[],[],"[26, 55]"
+6a0cb48a-6981-4af2-9ddf-682ae2e2adf3,2-1-2.jpg,12,10,527,416,556,435,none,sign,64,sign.n.02,hallway,['green'],[],[],"[23, 28]",[40]
+883bb87b-d31d-4cfd-8f4f-ba8d1721bece,2-1-2.jpg,12,11,597,475,614,486,none,sign,66,sign.n.02,hallway,['green'],[],[],[],[]
+c8d714aa-d10d-4f73-9425-d1b7a4ebc0d8,2-2-0.jpg,1,0,280,0,747,377,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+d03e2966-8fb7-42dc-888a-7984d21dce54,2-2-1.jpg,2,0,329,0,762,520,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+867856d5-64bb-47f9-b5f8-e13d92f312b0,2-2-1.jpg,2,1,667,233,747,316,none,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+1d625b72-72b6-4458-839b-b20e4f0d9373,2-2-2.jpg,3,0,335,97,715,522,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+c2026803-15fe-4956-8996-0cfd7822dcc7,2-2-2.jpg,3,1,716,237,784,278,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+90fb73d8-d743-4002-8031-b57cc43db391,2-2-2.jpg,3,2,635,487,708,522,partial,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+813fbb6d-a257-464e-85aa-9c6d68471511,2-3-0.jpg,2,0,379,0,409,112,partial,door,27,door.n.01,hallway,['blue'],[35],[],[],[53]
+653d99c0-0657-45b1-ba66-2868f35e2d73,2-3-0.jpg,2,1,653,0,677,109,partial,door,30,door.n.01,hallway,['blue'],[],[],[],[54]
+117b1077-194d-4904-ad0a-c41a81a2a63e,2-3-1.jpg,11,0,483,0,550,98,partial,lamp,50,lamp.n.02,hallway,['white'],[],[],[],[]
+bbb1d3ee-04aa-4496-ad10-778dc9b54990,2-3-1.jpg,11,1,522,162,550,191,none,lamp,47,lamp.n.02,hallway,['white'],[],[],[],[]
+a48f1689-df9d-4ced-a310-68629ff6aac0,2-3-1.jpg,11,2,520,255,574,290,none,window,83,window.n.01,hallway,['transparent'],[],[],[],[]
+0675be86-d986-4a0b-bfa1-a4fd98fa05ba,2-3-1.jpg,11,3,433,181,452,283,none,notice_board,53,board.n.05,hallway,['gray'],[],[],[],[27]
+c0c97b7e-16c9-450c-99ca-fbd58d737ada,2-3-1.jpg,11,4,397,125,421,412,none,door,27,door.n.01,hallway,['blue'],[35],[],[],[53]
+5b42571c-8a25-44ac-aafa-fbc2e41eb99f,2-3-1.jpg,11,5,649,127,662,406,none,door,30,door.n.01,hallway,['blue'],[],[],[],[54]
+1167c5c4-8ba8-40f5-8de1-81834b5ea155,2-3-1.jpg,11,6,677,41,730,276,none,notice_board,54,board.n.05,hallway,['gray'],[],[],[],[30]
+9129f35f-5969-4c07-9477-1c105131f21c,2-3-1.jpg,11,7,593,200,610,217,none,sign,67,sign.n.02,hallway,['red'],[],[],[],[]
+20e02cff-4bdd-4076-bb85-a66958b0ddd9,2-3-1.jpg,11,8,414,272,425,299,none,door_handle,35,doorhandle.n.01,hallway,['white'],[],[],[],[]
+9aa92b81-b2a5-4b66-8659-e69e2a90e939,2-3-1.jpg,11,9,532,208,551,224,none,lamp,48,lamp.n.02,hallway,['white'],[],[],[],[]
+9f79858b-c82b-47cc-8d46-662fee12efac,2-3-1.jpg,11,10,478,128,584,151,none,sign,71,sign.n.02,hallway,['white'],[],[],[],[]
+63990eb6-b361-4eaf-ae52-586bd39c4087,2-3-2.jpg,10,0,486,255,549,353,none,lamp,50,lamp.n.02,hallway,['white'],[],[],[],[]
+1e52bf08-b548-47ff-b1d1-771406a1b3b2,2-3-2.jpg,10,1,673,306,743,520,none,notice_board,54,board.n.05,hallway,['gray'],[],[],[],[30]
+3793a3d9-db23-4f52-913f-a6d9efb5be8e,2-3-2.jpg,10,2,523,415,554,445,none,lamp,47,lamp.n.02,hallway,['white'],[],[],[],[]
+ec42be01-c5b5-4930-adb0-079608f4bc3d,2-3-2.jpg,10,3,392,380,426,522,partial,door,27,door.n.01,hallway,['blue'],[35],[],[],[53]
+9f516b2c-a366-4629-90a2-e670a4741c86,2-3-2.jpg,10,4,512,503,579,522,severe,window,83,window.n.01,hallway,['transparent'],[],[],[],[]
+116bd418-6d32-4499-99c4-d1f03f60a37d,2-3-2.jpg,10,5,479,382,585,406,none,sign,71,sign.n.02,hallway,['white'],[],[],[],[]
+37bc99d1-bfc5-41f5-8fb5-71a925910b2e,2-3-2.jpg,10,6,596,454,614,471,none,sign,67,sign.n.02,hallway,['red'],[],[],[],[]
+77b91eb3-522c-4bcf-9847-5af76a84612f,2-3-2.jpg,10,7,532,462,554,483,none,lamp,48,lamp.n.02,hallway,['white'],[],[],[],[]
+36cce536-0039-47d0-a71c-2b81a0f8fcd5,2-3-2.jpg,10,8,649,380,674,523,partial,door,30,door.n.01,hallway,['blue'],[],[],[],[54]
+9141b032-c4a9-4197-a67a-07909bac2b57,2-3-2.jpg,10,9,431,433,455,521,partial,notice_board,53,board.n.05,hallway,['gray'],[],[],[],[27]
+fbe6d6d8-8bfc-4cd2-a51a-25878efb46ef,3-0-0.jpg,13,0,289,0,420,181,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+36511c28-ba6e-4dbe-ab5e-c5fe6c6b9651,3-0-0.jpg,13,1,416,96,432,121,partial,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+5cc3df23-a9b2-4259-9bdc-13f52b188dbe,3-0-0.jpg,13,2,286,201,334,243,partial,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+ddf40229-3e45-4f42-b935-1b8b96a37fc0,3-0-0.jpg,13,3,529,0,614,123,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+09e3fc0d-37cf-4bb4-81cd-090f22962c88,3-0-0.jpg,13,4,491,11,660,111,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+a61c3223-b896-40a5-b650-b48635c8e5d9,3-0-0.jpg,13,5,588,70,768,168,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+49c42e82-ee3e-43f6-a6e6-808066704242,3-0-0.jpg,13,6,668,40,699,86,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+f76fa499-3afc-4216-8b6e-b26695735472,3-0-0.jpg,13,7,607,73,652,100,none,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+d54ea79a-08fc-4e6c-9888-2524fd1c435b,3-0-0.jpg,13,8,735,77,752,94,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+2493d91e-a6f4-427a-8b13-d8e867a7600b,3-0-0.jpg,13,9,637,77,685,94,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+6b780216-bb2e-4dad-b653-9cd104658e58,3-0-0.jpg,13,10,718,67,739,83,none,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+4a3df888-a480-45de-b22f-a929f6f8919b,3-0-0.jpg,13,11,690,56,719,81,none,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+da8eed59-507e-4459-aa54-9763debd07b3,3-0-0.jpg,13,12,506,4,519,22,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+ac98114e-6aa3-42df-9084-4ed971bf97c5,3-0-1.jpg,22,0,454,87,602,111,none,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+bff19914-d440-4efe-a294-d889f37087c0,3-0-1.jpg,22,1,317,111,427,451,none,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+0469d599-d63b-43c6-a54f-432e9704a744,3-0-1.jpg,22,2,554,162,619,282,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+d0dd3a91-1d1d-419f-831b-37f769600fb4,3-0-1.jpg,22,3,441,162,510,285,none,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+45091770-77bc-4c0e-801f-3a8f57556de7,3-0-1.jpg,22,4,704,89,743,113,partial,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+ebe9e5ea-4a31-4811-a83d-42920913e7d6,3-0-1.jpg,22,5,587,342,745,438,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+a6cf8ec2-5328-46a8-b7f9-b71a7d466487,3-0-1.jpg,22,6,499,296,648,382,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+de085b8a-40c8-41d0-9d5d-155d2b726637,3-0-1.jpg,22,7,535,271,611,390,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+f7238c73-d42b-41a1-b8e1-21f9b865edbf,3-0-1.jpg,22,8,660,319,689,361,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+df4d2b71-20cd-45c4-a9e3-bdfdc8e19440,3-0-1.jpg,22,9,607,348,651,375,none,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+413a6313-1d37-425e-9048-a80b664230bc,3-0-1.jpg,22,10,385,74,404,119,partial,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+526e95d5-1e31-46a1-a8fc-cbe375dff0ac,3-0-1.jpg,22,11,425,364,437,392,partial,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+3254807a-9779-4bab-9b88-91f9f1fa3b8c,3-0-1.jpg,22,12,391,197,414,232,severe,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+fc95db3b-448f-4312-908b-00343af5ebd6,3-0-1.jpg,22,13,607,260,622,302,none,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+28a0c82f-e6be-4b10-b88e-174826532d82,3-0-1.jpg,22,14,607,265,620,299,none,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+0e29170c-7f33-465f-805a-76697f0171a2,3-0-1.jpg,22,15,617,272,635,300,none,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+44e25834-7456-4697-b02a-3244daed197e,3-0-1.jpg,22,16,510,287,522,304,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+20689028-72e5-4480-b4c5-ce8cb30d5ad7,3-0-1.jpg,22,17,726,351,739,367,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+30f7796c-6837-457e-bab2-34a276be83d5,3-0-1.jpg,22,18,680,330,709,353,none,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+db767fb2-6d95-4680-858a-cec4a7884b80,3-0-1.jpg,22,19,703,336,728,358,none,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+c34ca7b0-5870-41e5-ae28-d445fedfde50,3-0-1.jpg,22,20,297,464,334,510,partial,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+6f36836f-807c-483b-b673-f89fed16e868,3-0-1.jpg,22,21,629,348,680,369,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+8256196e-68d2-40e5-a900-938188c32a8a,3-0-2.jpg,11,0,412,227,643,257,none,lamp,49,lamp.n.02,living room,['white'],[],[],[],[]
+f52f5a4c-9b96-49c9-bc0c-f32eab9c605b,3-0-2.jpg,11,1,461,358,600,374,none,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+5353d7ef-3b1a-4eea-bd22-6836e240d8cf,3-0-2.jpg,11,2,700,357,728,376,partial,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+2329e766-dd96-4775-ba6e-f43898446926,3-0-2.jpg,11,3,560,432,619,520,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+9a53aa1a-97c3-405b-8e24-a4691e4da4a2,3-0-2.jpg,11,4,442,429,507,520,partial,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+7b3203c2-3d17-45f3-a7fd-a00cee412fe7,3-0-2.jpg,11,5,310,377,432,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+441cb89d-d9fd-4daa-8cd7-cfcc50b28577,3-0-2.jpg,11,6,745,166,827,213,none,sign,70,sign.n.02,hallway,['orange'],[],[],[],"[26, 55]"
+f20c946e-4b84-4969-bff4-d38057b0d4e1,3-0-2.jpg,11,7,385,464,409,495,severe,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+6482964d-577f-47ca-a2ce-17a5606e9ab6,3-0-2.jpg,11,8,391,341,412,389,partial,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+b6f79472-ef86-4ffa-a322-61c4f1271ba9,3-0-2.jpg,11,9,1033,131,1080,279,severe,notice_board,55,board.n.05,hallway,['gray'],[],[],[],[70]
+6d112c97-6020-443e-a5d0-72f413f8a282,3-0-2.jpg,11,10,262,83,362,520,severe,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+6cb3927e-0ef3-4b48-bb0b-444aefee3b32,3-1-0.jpg,3,0,540,1,682,157,partial,door,28,door.n.01,hallway,['white'],[33],[64],[],"[23, 72]"
+98b3bd95-face-4d70-bac4-9f599ae81895,3-1-0.jpg,3,1,383,2,535,159,partial,door,23,door.n.01,hallway,['white'],[],[64],[],"[28, 33]"
+2731e356-cd81-4e32-9909-d8d5b62e4dfb,3-1-0.jpg,3,2,46,0,285,58,severe,notice_board,55,board.n.05,hallway,['gray'],[],[],[],[70]
+9a21ec87-78ad-4005-8fff-918353b05f1e,3-1-1.jpg,7,0,104,1,316,348,partial,notice_board,55,board.n.05,hallway,['gray'],[],[],[],[70]
+c0777cd6-95f7-4f7a-bdae-cb4ab57c3ce2,3-1-1.jpg,7,1,393,109,536,457,none,door,23,door.n.01,hallway,['white'],[],[64],[],"[28, 33]"
+b5570214-1e2c-4d66-8c6e-0a4192ddb03c,3-1-1.jpg,7,2,535,110,685,457,none,door,28,door.n.01,hallway,['white'],[33],[64],[],"[23, 72]"
+0888375b-9bfc-4b68-836e-6cfff9d3fcf0,3-1-1.jpg,7,3,541,221,562,289,none,door_handle,33,doorhandle.n.01,hallway,['blue'],[],[],[],[23]
+f8b36782-381f-4adf-993e-98587190503a,3-1-1.jpg,7,4,506,56,554,86,none,sign,64,sign.n.02,hallway,['green'],[],[],"[23, 28]",[40]
+ffc43cc1-124c-4406-bcfd-320f0fe4b508,3-1-1.jpg,7,5,612,187,635,205,none,sign,66,sign.n.02,hallway,['green'],[],[],[],[]
+9d05af01-2f4f-40d1-85cc-f7155d478e79,3-1-1.jpg,7,6,711,155,726,208,none,sign,72,sign.n.02,hallway,['red'],[],[],[],[28]
+58d9beec-1bcc-448f-a9cd-fa2158d491df,3-1-2.jpg,8,0,457,42,565,254,none,lamp,40,lamp.n.02,hallway,['white'],[],[],[],[64]
+c6526e28-aeb0-45f5-a762-45cc7ec42a58,3-1-2.jpg,8,1,92,213,327,520,partial,notice_board,55,board.n.05,hallway,['gray'],[],[],[],[70]
+01f7a86e-46d3-4d6b-96c9-07ff90273ce9,3-1-2.jpg,8,2,540,354,668,522,partial,door,28,door.n.01,hallway,['white'],[33],[64],[],"[23, 72]"
+c76237a0-11a9-40a5-9d7f-a8513ba14951,3-1-2.jpg,8,3,402,356,536,522,partial,door,23,door.n.01,hallway,['white'],[],[64],[],"[28, 33]"
+c4cae28a-1600-4f7c-8fb2-1394ddf5f84c,3-1-2.jpg,8,4,506,306,556,331,none,sign,64,sign.n.02,hallway,['green'],[],[],"[23, 28]",[40]
+9c7663ca-bee8-4b47-a1cd-43972a3d1e83,3-1-2.jpg,8,5,614,426,636,444,none,sign,66,sign.n.02,hallway,['green'],[],[],[],[]
+f1941bcb-dbde-4fbc-a395-3df20b5f3eb6,3-1-2.jpg,8,6,708,392,727,448,none,sign,72,sign.n.02,hallway,['red'],[],[],[],[28]
+dec778dd-003f-4210-a387-08aa14911e3f,3-1-2.jpg,8,7,543,462,564,522,partial,door_handle,33,doorhandle.n.01,hallway,['blue'],[],[],[],[23]
+85b081ac-50f9-4588-8b34-d1ea3da3eb80,3-2-0.jpg,1,0,310,2,728,352,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+46b94b9f-b60b-48e1-94e5-20a142fb75cc,3-2-1.jpg,2,0,343,1,706,520,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+7a69a095-9b37-4be1-9e76-01816dc439ad,3-2-1.jpg,2,1,629,232,699,302,none,door_handle,32,doorhandle.n.01,hallway,['white'],[],[],[],[]
+d5d037b1-18ea-4815-9972-8a59c40295a0,3-2-2.jpg,3,0,334,111,711,521,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+6e35791f-f244-47fe-b31a-253137374867,3-2-2.jpg,3,1,633,491,701,520,partial,door_handle,32,doorhandle.n.01,hallway,['white'],[],[],[],[]
+0474f28f-9189-431b-83cb-a90c470856dd,3-2-2.jpg,3,2,712,244,781,289,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+59f6464f-c901-49dc-83a3-8566f8ebca5c,3-3-0.jpg,2,0,721,0,823,207,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+50d718d3-4e0c-477d-9182-e399108a4340,3-3-0.jpg,2,1,169,0,300,271,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+9333a33b-4c81-4cf9-9f70-b38690ba9c3e,3-3-1.jpg,12,0,725,69,792,492,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+a5a55e31-15e0-4853-827a-20ac716da3a6,3-3-1.jpg,12,1,210,2,305,520,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+43945d1b-de7a-4962-993e-254dca83e7e6,3-3-1.jpg,12,2,495,143,531,182,none,lamp,50,lamp.n.02,hallway,['white'],[],[],[],[]
+c37e0d8f-0f18-458a-b8c6-c54c025fac51,3-3-1.jpg,12,3,607,171,628,289,none,notice_board,54,board.n.05,hallway,['gray'],[],[],[],[30]
+0484f016-f95d-454d-88e2-79ccc7df88ce,3-3-1.jpg,12,4,498,267,548,301,none,window,83,window.n.01,hallway,['transparent'],[],[],[],[]
+396bda74-89ce-4304-bd74-ad799973590e,3-3-1.jpg,12,5,507,209,528,227,none,lamp,47,lamp.n.02,hallway,['white'],[],[],[],[]
+3d736433-3796-43e6-903c-54ad4a8caf8d,3-3-1.jpg,12,6,284,269,305,309,none,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+6ed47f7c-d402-4800-b888-b1670885ba24,3-3-1.jpg,12,7,315,152,332,182,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+6e39133b-46dc-4fe4-9048-218bc914cff6,3-3-1.jpg,12,8,560,229,573,243,none,sign,67,sign.n.02,hallway,['red'],[],[],[],[]
+34c39b57-9cbe-4689-b483-fe7bffccef2b,3-3-1.jpg,12,9,482,190,553,208,none,sign,71,sign.n.02,hallway,['white'],[],[],[],[]
+02cc24a7-7b8b-4e24-91db-211255e92efa,3-3-1.jpg,12,10,512,236,529,248,none,lamp,48,lamp.n.02,hallway,['white'],[],[],[],[]
+c2d549cc-519c-42a4-bfc0-fc44e71c933c,3-3-1.jpg,12,11,792,44,823,97,none,sign,69,sign.n.02,hallway,['orange'],[],[],[],[29]
+11ba89fb-4927-4531-8aac-c1109e860112,3-3-2.jpg,8,0,448,83,548,277,none,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+17231318-ea20-4010-b227-c053412f2f90,3-3-2.jpg,8,1,719,330,801,521,partial,door,29,door.n.01,office,['blue'],[31],[],[],[69]
+508aedb2-22e6-4428-be17-19d937fa6ebe,3-3-2.jpg,8,2,200,225,326,521,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+8eb1608e-e382-484b-b353-a2b9b90a17b3,3-3-2.jpg,8,3,497,394,534,436,none,lamp,50,lamp.n.02,hallway,['white'],[],[],[],[]
+840ae1c3-9739-4e51-81f8-27f42a7fed50,3-3-2.jpg,8,4,776,312,802,356,none,sign,69,sign.n.02,hallway,['orange'],[],[],[],[29]
+66ad8500-3214-47a8-815d-6946d5ddb4b4,3-3-2.jpg,8,5,315,408,336,431,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+70a254fe-7ceb-492b-9e9b-59629a620c79,3-3-2.jpg,8,6,562,485,575,499,none,sign,67,sign.n.02,hallway,['red'],[],[],[],[]
+1da303b8-3d28-45dd-a5ec-d80dd87e3d1e,3-3-2.jpg,8,7,484,446,554,465,none,sign,71,sign.n.02,hallway,['white'],[],[],[],[]
+bf979b73-c7e3-4f0d-adf6-d999b018ab35,4-0-0.jpg,19,0,0,22,41,99,severe,vase,79,vase.n.01,living room,['transparent'],[],[58],[],[57]
+3426f7e9-936d-42dc-9070-1abc5c1abe6c,4-0-0.jpg,19,1,456,15,478,32,none,rubiks_cube,62,toy.n.01,living room,"['yellow', 'white', 'red', 'green', 'blue', 'orange']",[],[],[22],[1]
+cc4ae8be-f3fe-4f9c-8aac-8244f5c8ace9,4-0-0.jpg,19,2,421,12,438,34,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+9c6f1874-539d-49af-90b8-c863f43ce9f3,4-0-0.jpg,19,3,603,0,622,28,partial,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+d3ed341f-4070-45c7-b45c-3f75f5a4da41,4-0-0.jpg,19,4,625,1,646,29,partial,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+67127473-6969-4f36-b54b-47d0a61a57ce,4-0-0.jpg,19,5,787,133,845,177,partial,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+2ff2c264-6b28-4f11-9c21-b474a0020bd2,4-0-0.jpg,19,6,844,155,895,186,none,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+42100fe8-782c-486f-be30-7fcce0b1653f,4-0-0.jpg,19,7,944,220,989,259,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+bda2360d-9d03-4c3c-b1d5-ac22f61f03a0,4-0-0.jpg,19,8,621,213,738,273,none,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+7ac1061f-b28d-41fc-9845-17fb271376eb,4-0-0.jpg,19,9,638,198,810,271,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+a7d8590b-51c0-4aac-b98c-58ec30c39ca9,4-0-0.jpg,19,10,757,114,827,212,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+acfeec47-dd37-4fa0-8cc6-bca6b7ed2d33,4-0-0.jpg,19,11,815,2,890,150,partial,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+c1c6214b-a6be-48fd-a5d1-af26a38429d8,4-0-0.jpg,19,12,937,58,1080,252,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+327a62e4-90bd-49fe-87cc-3358d2f315c4,4-0-0.jpg,19,13,562,155,1080,421,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+fa5976e4-d73e-40fc-ba49-0e4f2a5b8310,4-0-0.jpg,19,14,234,177,278,219,none,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+bcc695f2-9257-495b-9e2d-5c69d9f33ba8,4-0-0.jpg,19,15,176,244,210,297,severe,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+dd5585c3-4c1b-4d8b-85ba-26047f152634,4-0-0.jpg,19,16,0,2,206,518,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+d51105ae-9e19-46a5-9c1c-c886300b1bf4,4-0-0.jpg,19,17,398,19,685,188,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+1826ac11-5d6a-48f6-9a5e-3fb6e67824ea,4-0-0.jpg,19,18,471,0,610,206,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+09e2dead-b4be-4e46-959c-760eff9ab0c9,4-0-1.jpg,23,0,764,0,1003,23,partial,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+31bb3809-2aa0-4d7a-aa87-43175ce459f9,4-0-1.jpg,23,1,343,0,585,11,severe,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+8b24f53e-6698-4010-b76f-28b93746d6ca,4-0-1.jpg,23,2,0,106,129,195,partial,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+68a01978-a42a-4383-9073-2db019e6b109,4-0-1.jpg,23,3,0,34,15,68,severe,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+f9e6d430-5e35-48fa-9c99-d799e42e88fa,4-0-1.jpg,23,4,29,275,86,378,none,vase,79,vase.n.01,living room,['transparent'],[],[58],[],[57]
+620363f8-9251-4508-aea7-95ab845514b9,4-0-1.jpg,23,5,1,0,190,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+5785469e-337b-42a5-9d8c-f345cdde426d,4-0-1.jpg,23,6,237,464,281,509,none,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+779d0161-90a7-4c2e-877a-b3a282f41e72,4-0-1.jpg,23,7,348,126,435,293,none,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+31c70b4c-7168-4c89-9170-cb00ccebdf9f,4-0-1.jpg,23,8,617,290,635,331,none,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+09ff15cc-8657-494c-a8a9-23f6eb10590d,4-0-1.jpg,23,9,599,275,617,329,none,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+c1d79f0d-bfa9-45bd-8f47-2580657219d0,4-0-1.jpg,23,10,471,317,483,332,none,rubiks_cube,62,toy.n.01,living room,"['yellow', 'white', 'red', 'green', 'blue', 'orange']",[],[],[22],[1]
+1ef947fc-e254-4438-a273-dddec8aa9ede,4-0-1.jpg,23,11,435,316,452,335,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+dd4bf9d7-5e8e-4ca9-82d1-232850cf8a94,4-0-1.jpg,23,12,523,131,603,292,none,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+beeb9b14-6602-472d-b9e8-477e5ac982b8,4-0-1.jpg,23,13,835,443,888,477,none,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+ab4c5697-d6ec-4ccb-b49c-d1b2e1c8d88b,4-0-1.jpg,23,14,780,422,839,470,partial,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+9554f551-19b0-4862-bc85-d0f4c926e96f,4-0-1.jpg,23,15,947,503,987,520,severe,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+ee421161-48c8-488f-9811-45270060dd62,4-0-1.jpg,23,16,929,319,1080,509,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+05e2d726-db5c-4fdb-bcde-b6e9d1615c7c,4-0-1.jpg,23,17,634,492,807,520,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+91514f80-2a2e-4123-bc90-f9db99ab3adc,4-0-1.jpg,23,18,755,405,820,503,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+7b2ca2c0-7e17-46f9-b419-84da0c438d54,4-0-1.jpg,23,19,793,291,868,445,partial,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+c87159a8-7e05-4dc5-925d-d8aa2c2cb595,4-0-1.jpg,23,20,565,450,1023,523,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+e521dd84-dcc1-4973-8f6d-0f2152dbc355,4-0-1.jpg,23,21,411,324,677,478,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+0c80e807-afe9-4cea-aaca-cc0d79204a5b,4-0-1.jpg,23,22,467,281,607,496,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+ef974963-22bb-48cd-86d0-5b4f711ca2b8,4-0-2.jpg,10,0,740,248,963,289,none,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+f7eba01d-3104-4821-ae2e-15c9bee4aef9,4-0-2.jpg,10,1,354,238,585,279,none,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+a086413c-386a-41b0-9beb-dfde77c66adc,4-0-2.jpg,10,2,1051,331,1080,454,severe,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+6b7ed8ba-e1d2-4a19-bb0d-7b7d7f170583,4-0-2.jpg,10,3,127,99,172,174,partial,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+2ba1bb36-e3e1-47ec-aa68-5963999a3d0b,4-0-2.jpg,10,4,520,382,602,521,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+723a4022-0b45-4c4d-a352-cdd3bf8534d4,4-0-2.jpg,10,5,342,385,438,522,partial,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+fd18bc40-b71d-4067-856c-cfa215929bf8,4-0-2.jpg,10,6,27,231,58,256,partial,rubiks_cube,60,toy.n.01,living room,"['white', 'yellow', 'red', 'blue', 'orange', 'green']",[],[88],[78],[]
+ad0a09d9-adc3-4a69-9c6f-4df15e208ff5,4-0-2.jpg,10,7,0,283,53,370,partial,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+2c3eaa22-08c5-482a-be38-1078a6b1d238,4-0-2.jpg,10,8,6,331,150,447,none,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+2aa3df19-9977-49a2-9e49-b0dd39e705c8,4-0-2.jpg,10,9,2,93,232,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+9b68df5c-f261-47f0-b152-4e915b80a86f,4-1-0.jpg,9,0,936,301,975,346,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+5bac0d38-ddfb-419a-9e3c-dfc5ea702776,4-1-0.jpg,9,1,812,142,1080,516,partial,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+4256cee3-c565-4e70-9667-08df2df8cb0d,4-1-0.jpg,9,2,570,0,773,196,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+aa0239cd-b72c-4fbb-a149-32d3e8a92f45,4-1-0.jpg,9,3,474,137,704,305,none,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+fd3f8dfa-de53-46ca-ae6a-139ef879b1e8,4-1-0.jpg,9,4,332,0,440,114,partial,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+ac9b418f-923f-4f17-84ef-7dd70173fb8f,4-1-0.jpg,9,5,192,128,271,156,none,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+95f87c8a-4b3a-4002-bbd4-df655ccc7d0a,4-1-0.jpg,9,6,23,60,57,102,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+b2f3ca3c-dc08-498c-a9fe-4b673d69382a,4-1-0.jpg,9,7,0,248,114,507,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+ec1d8860-d214-4cc2-ae75-482aba929d6e,4-1-0.jpg,9,8,2,33,327,242,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+9b2b9657-eb4a-4f4d-a874-728cae55e6ed,4-1-1.jpg,9,0,985,428,1079,520,severe,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+bdbe4474-476e-433b-9a1e-a634d6f358b3,4-1-1.jpg,9,1,569,284,755,521,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+c98ef173-5db2-45a4-a2fe-0cf3037869b2,4-1-1.jpg,9,2,476,431,701,523,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+4222b237-55f9-4b44-99dc-f199512a509c,4-1-1.jpg,9,3,442,109,551,194,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+d7a0f1bd-dbd8-40f3-b6e4-45f39dc3c372,4-1-1.jpg,9,4,36,112,168,232,none,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+9a7e21f7-4a87-447b-bc30-bad153b6e4a4,4-1-1.jpg,9,5,353,261,456,406,none,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+52cea2a7-cc1e-4ae8-89db-1ed5a4731077,4-1-1.jpg,9,6,206,411,283,446,none,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+10ae9245-097c-45e8-a410-171d7dbb0af1,4-1-1.jpg,9,7,48,337,82,377,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+27985e8b-1518-464f-908c-d7036a675c3e,4-1-1.jpg,9,8,0,331,333,515,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+0ad3501f-b364-449e-b64e-520060e35db9,4-1-2.jpg,4,0,440,371,554,457,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+f30def1b-d0a7-403b-9cdd-e32fff1f1173,4-1-2.jpg,4,1,28,364,174,474,none,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+9fc88119-4ee6-4bb8-9583-a8e5f57e9255,4-1-2.jpg,4,2,1,203,48,257,severe,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+42f629a9-bb65-41e5-9b9b-2cd5693a3f36,4-1-2.jpg,4,3,361,59,455,255,none,lamp,44,lamp.n.02,living room,['white'],[],[],[],[]
+b562b75b-b01d-452e-bfe8-479ba826b1fa,4-2-0.jpg,4,0,496,1,658,164,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+880c5604-074b-410b-aa92-10f2c64a0850,4-2-0.jpg,4,1,794,1,1079,522,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+d9b6fdb1-cea5-49d0-a1fb-92163ff9e002,4-2-0.jpg,4,2,9,328,53,372,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+a1b38b33-1a22-42c3-9996-f747510fb4f1,4-2-0.jpg,4,3,0,150,201,518,partial,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+dec76560-2aa4-4200-aed9-ba7833b0addb,4-2-1.jpg,5,0,670,154,704,177,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+07d13a6c-0dce-4e3a-bea4-3bf1a7747b95,4-2-1.jpg,5,1,1,433,155,521,severe,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+a4faa61f-4788-47af-8127-db1854d60cee,4-2-1.jpg,5,2,504,63,659,460,none,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+0e91bf7b-76c8-44a7-b5d3-68d606f49bfa,4-2-1.jpg,5,3,625,264,658,300,none,door_handle,32,doorhandle.n.01,hallway,['white'],[],[],[],[]
+d591d2af-89c1-4715-9c86-74920847c887,4-2-1.jpg,5,4,821,1,1079,519,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+2a499bdc-3f23-4520-bfa5-c2cab6fd587d,4-2-2.jpg,3,0,667,408,701,436,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+d86e3622-bdf0-48ad-b6b7-30b37c012c5a,4-2-2.jpg,3,1,503,327,666,521,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+71c8fc58-65cf-44b7-a4e0-858d59434f2e,4-2-2.jpg,3,2,752,4,1080,522,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+b598d6d7-e9a7-484f-8f85-c900b06a3e90,4-3-0.jpg,4,0,1015,1,1079,101,partial,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+359a4679-4778-497d-b4d5-7e36aeff778b,4-3-0.jpg,4,1,501,351,595,431,none,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+d3a07acd-d150-434c-8a3e-aa038c376b8d,4-3-0.jpg,4,2,2,2,343,520,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+fdf938cb-7fd5-4862-9dc9-e61b966f7dcc,4-3-0.jpg,4,3,820,2,1080,460,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+891cefa0-5fbb-4ac2-a85f-2201d9520f4d,4-3-1.jpg,7,0,229,0,354,143,partial,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+187c98cf-c26a-485f-99d1-04692218ca35,4-3-1.jpg,7,1,1039,75,1079,171,severe,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+3b2e0397-8eaa-41c5-b99e-36667585b2d1,4-3-1.jpg,7,2,972,25,1045,169,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+1dc6a279-68e4-4d68-8a4d-f868cd923370,4-3-1.jpg,7,3,982,232,1033,395,partial,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+5f15b78a-4f9b-4975-9cdd-3dd423adea98,4-3-1.jpg,7,4,848,1,1078,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+e7eb5283-f910-4f9e-886d-260e6db5f89c,4-3-1.jpg,7,5,0,2,314,520,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+78f220ef-4d09-47b0-b3e5-bcfcd290c126,4-3-1.jpg,7,6,222,229,305,311,none,door_handle,36,doorhandle.n.01,living room,['white'],[],[3],[],[]
+7ce5433e-be56-4d45-b7db-49594967e8ab,4-3-2.jpg,9,0,948,51,1001,126,partial,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+5a34c9ac-c9ca-4a9c-89a7-2cc5391c3551,4-3-2.jpg,9,1,938,237,971,255,partial,rubiks_cube,60,toy.n.01,living room,"['white', 'yellow', 'red', 'blue', 'orange', 'green']",[],[88],[78],[]
+cf529076-5b01-443d-bfa6-82b1e5125193,4-3-2.jpg,9,2,935,281,1029,420,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+65ed2902-f28f-4bc5-980d-7ccb63f22338,4-3-2.jpg,9,3,1011,323,1078,414,partial,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+5d7611f2-57a8-4922-b6ff-fadf018d1e8b,4-3-2.jpg,9,4,984,481,1030,518,severe,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+aa92d05c-97f7-49d1-9f59-25eaf7395a27,4-3-2.jpg,9,5,803,117,1079,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+25d7e1a0-af0a-4d78-8ba0-62d90bde82f0,4-3-2.jpg,9,6,251,123,371,406,none,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+f783dce6-9f51-405b-8b0f-c201e785d170,4-3-2.jpg,9,7,218,489,305,522,partial,door_handle,36,doorhandle.n.01,living room,['white'],[],[3],[],[]
+b1f491ec-cec6-4756-9272-43d68b6b82f8,4-3-2.jpg,9,8,1,0,364,520,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+32651c04-20d5-4fbb-a0ef-db2601d98c10,5-0-0.jpg,4,0,537,48,588,99,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+f0c0014d-ed80-4dc0-86e4-7ae7f440e205,5-0-0.jpg,4,1,612,41,651,75,none,rubiks_cube,62,toy.n.01,living room,"['yellow', 'white', 'red', 'green', 'blue', 'orange']",[],[],[22],[1]
+7032ef4c-9b0f-45f6-bbb9-3ef4500a2942,5-0-0.jpg,4,2,659,2,1080,520,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+00041e37-4a34-49dc-ad6e-82bb51893728,5-0-0.jpg,4,3,459,59,931,508,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+a7fffea0-7669-4376-b539-4d495d7a9854,5-0-1.jpg,6,0,539,359,585,401,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+8efc2038-d702-4354-837c-806fa2e2155c,5-0-1.jpg,6,1,607,347,646,378,none,rubiks_cube,62,toy.n.01,living room,"['yellow', 'white', 'red', 'green', 'blue', 'orange']",[],[],[22],[1]
+e88bef97-25ff-4e01-9df0-4e3457e2a262,5-0-1.jpg,6,2,689,0,860,281,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+6387049e-387d-46b1-96bc-b94e66dc1b13,5-0-1.jpg,6,3,318,1,493,283,partial,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+60bb609e-5cd1-4788-819c-563e25a575ea,5-0-1.jpg,6,4,732,225,1080,521,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+63a987ae-2bab-489a-b6b4-3efa1b6596d3,5-0-1.jpg,6,5,469,358,1076,521,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+9b50df01-9b8f-4daf-8647-0657e2f3ccf9,5-0-2.jpg,2,0,309,218,503,520,partial,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+4be1b1f6-6798-40cc-a0cc-a01003885f25,5-0-2.jpg,2,1,664,220,868,520,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+3c590a78-8fac-4bf2-8f9e-39aff733b5c1,5-1-0.jpg,15,0,954,172,989,200,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+89a3917a-2c2e-455e-a87e-6ff7748b01ff,5-1-0.jpg,15,1,762,157,803,187,severe,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+b61336d7-083b-4921-b074-b6b15a52545f,5-1-0.jpg,15,2,730,149,795,206,none,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+2c28910e-28b4-4686-80a7-59a39479f3cc,5-1-0.jpg,15,3,719,91,796,131,none,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+0fb4309d-05f6-48e8-b9a6-d53f18b42920,5-1-0.jpg,15,4,508,19,544,55,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+b2532196-c884-4d0c-a325-b1d1d184a218,5-1-0.jpg,15,5,789,0,883,87,partial,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+777a5da3-d77c-4bf9-9449-b8785274835e,5-1-0.jpg,15,6,976,119,1080,189,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+43f5433e-4b3a-4579-a9dc-7a350364204a,5-1-0.jpg,15,7,994,2,1079,128,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+0edb9819-1f3a-4bb7-b27d-a6285130027c,5-1-0.jpg,15,8,992,229,1079,310,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+da1600f5-5314-43fd-a5bb-b81758d1dc53,5-1-0.jpg,15,9,884,126,976,242,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+b6751dd2-5038-4625-a806-a2cc05105a5a,5-1-0.jpg,15,10,658,171,1080,481,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+39022298-c10b-40b6-8045-fdc7a4c5c797,5-1-0.jpg,15,11,387,15,797,189,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+9e43ec3c-146d-4491-9306-d22447c46728,5-1-0.jpg,15,12,126,0,276,224,partial,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+3dd86c8d-bbe7-4c85-8861-0c48b0b60b97,5-1-0.jpg,15,13,96,77,224,365,severe,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+4d60f3fe-0c8b-4746-a0a1-2bb65cc895dc,5-1-0.jpg,15,14,0,2,241,520,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+c0877cf0-30f2-408b-b491-f9cea9b16ec2,5-1-1.jpg,18,0,141,369,178,520,severe,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+6c9d4f98-db3f-4a7d-83e5-5d200ff571e6,5-1-1.jpg,18,1,0,237,155,521,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+77a2ee63-ffd1-4c4a-9113-f2ac33ad38c8,5-1-1.jpg,18,2,450,123,581,225,none,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+8f4c7faf-b8f2-4e4b-8d49-c9e02ebe21b7,5-1-1.jpg,18,3,393,1,450,22,severe,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+aa32774e-2905-467d-b8b9-528179a6be58,5-1-1.jpg,18,4,830,1,886,20,severe,lamp,44,lamp.n.02,living room,['white'],[],[],[],[]
+1599bc27-75d3-4537-82eb-73925ce35644,5-1-1.jpg,18,5,824,126,917,200,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+0d21dead-1ddb-44b4-b00f-4243806f23ff,5-1-1.jpg,18,6,765,254,853,380,none,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+31679fc7-ba91-49e9-9476-19464f353078,5-1-1.jpg,18,7,516,322,547,355,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+fb95faf9-12dd-4324-984a-8e996addb42f,5-1-1.jpg,18,8,157,285,273,510,none,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+87530d15-6a0f-4b17-9b52-bbf8ecfe657c,5-1-1.jpg,18,9,762,451,799,482,severe,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+f2b87465-49b6-4fdc-8993-cbcfe15c8e6c,5-1-1.jpg,18,10,731,447,791,505,none,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+c33d4689-6812-4631-b61a-8c504837e699,5-1-1.jpg,18,11,951,455,982,485,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+624f92b3-616c-48fe-9e5d-cc5c81da5b2e,5-1-1.jpg,18,12,980,395,1079,469,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+dd76d68f-3fc4-4d28-bfd3-133b29bf96bf,5-1-1.jpg,18,13,979,272,1079,392,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+a9b65c94-719d-4ab1-8f20-c03cec2ff1dc,5-1-1.jpg,18,14,886,420,955,520,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+02f3f769-6885-4a9c-9ee7-30a9ac8f76b0,5-1-1.jpg,18,15,663,457,1079,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+cc01b4ab-4ca8-4fbd-b350-2f32f315ea5d,5-1-1.jpg,18,16,712,385,786,412,none,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+b6d8da8e-37be-4a04-8988-e5a17539ad7f,5-1-1.jpg,18,17,393,317,785,481,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+89025a4e-0192-451f-b234-9efd2e87739c,5-1-2.jpg,6,0,350,138,464,283,none,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+97285149-e758-46b4-95b0-1c7a3da9da7f,5-1-2.jpg,6,1,807,138,964,283,none,lamp,44,lamp.n.02,living room,['white'],[],[],[],[]
+c13fd3db-bf2b-41d1-84f6-da83bc7638a1,5-1-2.jpg,6,2,817,375,919,452,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+82ebe478-4036-4e30-8662-3b3c9f4fba19,5-1-2.jpg,6,3,448,382,583,485,none,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+ce791672-61f5-4c1e-b782-b26dcbbfeee8,5-1-2.jpg,6,4,0,490,148,523,severe,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+b6624d2c-dc15-44f0-a3a4-6746bcdcad3a,5-1-2.jpg,6,5,788,503,862,522,severe,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+3a1b7361-a35d-45a2-a7cc-55f4da6aa460,5-2-0.jpg,13,0,959,438,1079,520,severe,bag,6,bag.n.04,living room,['gray'],[],[],[],"[7, 17]"
+32cc3bc6-8dd9-4547-af49-c3257de2b405,5-2-0.jpg,13,1,772,1,883,88,partial,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+42f236cc-3aae-45e1-a0e5-184b952b76bd,5-2-0.jpg,13,2,677,213,711,254,partial,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+6738caab-250a-4e39-9f07-ba90bc9065a4,5-2-0.jpg,13,3,458,1,562,104,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+b2c21195-6464-412c-8f7c-66074f60b213,5-2-0.jpg,13,4,261,114,276,132,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+1e7f327c-83bb-4ec7-8923-54560b203791,5-2-0.jpg,13,5,233,51,322,194,none,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+b42286cb-2000-49ad-9dd9-b4d862891610,5-2-0.jpg,13,6,85,203,196,254,none,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+fcfd2474-1dd2-45e1-9d48-3e8466669adb,5-2-0.jpg,13,7,3,229,122,306,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+2c91fce2-7be3-4736-9bab-d002a935eb56,5-2-0.jpg,13,8,2,131,112,219,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+a3cbae02-9aa9-4e2c-9df0-8001eea7f534,5-2-0.jpg,13,9,0,45,46,141,severe,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+0f8b6aaf-e84a-461b-b8e4-f33664e978d1,5-2-0.jpg,13,10,571,1,735,199,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+df182865-f25b-4596-8df9-af01db350a5d,5-2-0.jpg,13,11,694,1,1079,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+cf6d3caa-ff53-481a-9358-e50f1a76a30a,5-2-0.jpg,13,12,2,216,254,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+668c85fd-91ed-4773-828d-543c94ee03ea,5-2-1.jpg,15,0,271,397,288,415,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+dc515934-77cc-4ea0-adc8-d849783ff912,5-2-1.jpg,15,1,236,341,334,476,none,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+19b0c02d-d907-4b02-bcf3-88b31f15122d,5-2-1.jpg,15,2,1,394,111,488,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+b6d9eb21-4020-4a47-b56f-e412dd5a32e9,5-2-1.jpg,15,3,0,283,63,409,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+7baea10a-3c41-4cff-84c0-2d344b3034d1,5-2-1.jpg,15,4,469,151,562,392,none,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+2f305eac-0fed-4365-904a-e92b7de68ccb,5-2-1.jpg,15,5,543,273,564,295,none,door_handle,32,doorhandle.n.01,hallway,['white'],[],[],[],[]
+5a233b8a-fb5b-4373-b7ad-a510cfe98106,5-2-1.jpg,15,6,670,258,710,295,none,door_handle,36,doorhandle.n.01,living room,['white'],[],[3],[],[]
+6ba64315-0ce5-43e4-953f-a8916de48211,5-2-1.jpg,15,7,671,50,716,223,partial,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+3caa8470-c11e-46bc-a321-2a6bb033246b,5-2-1.jpg,15,8,762,34,839,169,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+5e1dcf3b-dd18-42fe-9b41-97745497c8f6,5-2-1.jpg,15,9,865,2,913,123,severe,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+5320e64e-455a-49f7-a094-263b97b03195,5-2-1.jpg,15,10,748,232,850,380,none,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+091f1fb0-529e-48ba-8e8c-cee4b50ffa8b,5-2-1.jpg,15,11,711,0,1079,516,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+477881d0-b4b4-4070-8b44-25daa3d9e722,5-2-1.jpg,15,12,88,489,198,519,partial,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+21e111bc-2859-43ab-bd58-6ee4b54f38ea,5-2-1.jpg,15,13,0,489,252,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+ee74536d-ec66-47a5-a1a8-1d83e86c5237,5-2-1.jpg,15,14,571,42,714,476,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+6fc009a1-dcb1-46ca-ad8e-c45651df74a2,5-2-2.jpg,10,0,721,41,744,99,severe,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+e93736e6-9639-4d3f-9e7d-ff467c1c234d,5-2-2.jpg,10,1,307,104,625,155,none,lamp,49,lamp.n.02,living room,['white'],[],[],[],[]
+ce867d65-01f9-473f-ab82-ac66907d7c79,5-2-2.jpg,10,2,2,122,111,172,partial,lamp,44,lamp.n.02,living room,['white'],[],[],[],[]
+fe65b131-cb11-4cd0-92bc-42fac1f68c55,5-2-2.jpg,10,3,465,406,561,520,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+2da2b3dc-0cf6-4faa-8120-39eec793c631,5-2-2.jpg,10,4,747,305,809,432,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+05302771-0c1e-4855-b7fb-16c42b62377c,5-2-2.jpg,10,5,796,493,836,522,severe,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+9704c1f8-8060-4458-bce2-af86c6d3eae0,5-2-2.jpg,10,6,822,249,874,375,severe,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+12ee8b0b-07ad-4a30-a5da-ff100add69c5,5-2-2.jpg,10,7,671,313,718,473,partial,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+197472a9-d0fd-4208-908c-81e2c188100f,5-2-2.jpg,10,8,566,310,723,522,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+a7a2dbfd-f8f0-4ac5-99ce-7ff093a36625,5-2-2.jpg,10,9,682,2,1080,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+002d9378-c782-4a1b-bec1-1adef1450c61,5-3-0.jpg,3,0,685,475,795,522,partial,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+e13f7776-bbff-47e0-b550-136865d71cb9,5-3-0.jpg,3,1,106,327,358,521,partial,bag,6,bag.n.04,living room,['gray'],[],[],[],"[7, 17]"
+326416b7-cf2f-4ad1-a0c9-89019cbe780e,5-3-0.jpg,3,2,4,2,162,520,severe,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+dec83032-7e9c-494b-89eb-37d583cfc0fd,5-3-1.jpg,1,0,0,0,138,521,severe,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+d5ad04ca-4764-4ba4-b008-755868d242a9,5-3-2.jpg,1,0,1,0,225,520,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+573952c8-de0a-4780-b14c-f61129156a24,6-0-0.jpg,4,0,712,0,947,425,partial,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+4c560f13-2d89-42e6-b67c-6bc4adea6e0c,6-0-0.jpg,4,1,2,0,77,131,partial,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+f290ef29-cdc0-47f8-8bb5-ab9aa5e0276c,6-0-0.jpg,4,2,7,44,65,119,partial,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+d3f4fb2f-5c47-4694-8875-d9b27ba2c63a,6-0-0.jpg,4,3,1,68,336,520,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+2c7b26b7-69ec-4ac6-a622-9d68d645b423,6-0-1.jpg,5,0,730,281,905,520,partial,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+8d1569b1-1c8d-4efb-a9e2-15a1f900a877,6-0-1.jpg,5,1,115,2,277,287,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+bd3588fd-7017-47da-9af5-04493542e20d,6-0-1.jpg,5,2,57,291,119,411,none,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+74db2c53-bc60-46b5-a952-0ce80a8a0f5d,6-0-1.jpg,5,3,57,241,103,402,partial,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+47d2615f-2677-44e5-98b5-a0c78f0fcede,6-0-1.jpg,5,4,1,363,312,523,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+8826b3fb-cacf-49b2-97a3-74e0acb392e9,6-0-2.jpg,2,0,109,203,323,521,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+6390b55b-f2fa-42a9-9ede-699309dccb02,6-0-2.jpg,2,1,2,218,47,362,severe,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+b8757c65-1aab-44aa-99fd-d74fe5c6b922,6-1-0.jpg,3,0,1035,254,1080,317,severe,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+9d05f757-42ff-487e-9149-0e385da1fd28,6-1-0.jpg,3,1,537,65,619,157,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+f1ebb638-46d0-42d9-8688-acc76a493048,6-1-0.jpg,3,2,199,46,1079,500,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+0197e9cb-8f96-4990-b241-0fef6163edda,6-1-1.jpg,4,0,394,0,672,163,partial,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+e8a81833-318a-40e3-b36b-c735779a067d,6-1-1.jpg,4,1,1052,241,1080,479,severe,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+87ca7039-2e04-452d-9c63-166270e2ccb4,6-1-1.jpg,4,2,538,387,617,468,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+bdefd93b-a6a0-4321-8d41-f64670adff7d,6-1-1.jpg,4,3,337,359,1061,522,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+2e7f1a3e-9b11-4129-917d-76b008eb21e6,6-1-2.jpg,3,0,329,0,431,19,severe,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+f523b7f3-8d45-4bfb-8fac-2c9cb9a9df55,6-1-2.jpg,3,1,1050,0,1079,52,severe,lamp,44,lamp.n.02,living room,['white'],[],[],[],[]
+6e0089af-037f-46ee-93ff-2b02e80e78ec,6-1-2.jpg,3,2,400,232,668,418,none,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+be2f2831-3d56-4b98-92f4-e65baa50062f,6-2-0.jpg,16,0,632,97,651,116,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+1e2b5749-6074-4106-9980-02cdccf77bc9,6-2-0.jpg,16,1,599,36,680,173,none,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+63efc9f3-9046-4d49-90d9-13af236fc539,6-2-0.jpg,16,2,750,1,787,97,severe,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+6776df19-c56e-440b-abb2-22d400658c58,6-2-0.jpg,16,3,731,181,761,212,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+932ced62-bf05-438c-a5d9-974cc7fb26cc,6-2-0.jpg,16,4,2,0,116,189,partial,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+628beb54-44e7-4b0b-8226-e7848a488132,6-2-0.jpg,16,5,68,200,277,319,none,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+0055d9c2-2994-4451-827e-4a46545de2a6,6-2-0.jpg,16,6,317,102,509,233,none,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+227f8ac4-2031-4dd1-81e5-0ec91c9f4bdb,6-2-0.jpg,16,7,202,0,403,204,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+c3dfd744-1051-420f-8ea5-235f175bc1d8,6-2-0.jpg,16,8,941,177,1040,213,partial,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+0cd86d05-1058-4054-b697-fd81867652c2,6-2-0.jpg,16,9,886,191,1049,256,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+922426a7-a8f0-4073-9482-eed6116a73a0,6-2-0.jpg,16,10,893,146,997,268,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+7ea192b0-65d8-4327-a05f-abd978eff530,6-2-0.jpg,16,11,764,265,849,324,none,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+0e97c917-1bcf-4a82-9cd2-f1638b5ac6e8,6-2-0.jpg,16,12,850,273,975,355,none,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+9783c775-2219-42a4-8b02-585d0f462c20,6-2-0.jpg,16,13,887,0,1078,190,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+367c4f67-32ce-4de2-93f0-69e034f2592e,6-2-0.jpg,16,14,645,183,1076,522,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+913690df-5010-4f2f-be4c-348ca57c54f1,6-2-0.jpg,16,15,1,202,244,520,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+d3232620-695e-42e0-a6eb-e9a1b2c635f4,6-2-1.jpg,18,0,1019,256,1058,292,none,door_handle,36,doorhandle.n.01,living room,['white'],[],[3],[],[]
+ab4080a2-ce62-4b3f-9c69-aad4ca01d089,6-2-1.jpg,18,1,1012,75,1075,219,none,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+d5f6adfe-1493-419f-91e4-2da1a7e72ad0,6-2-1.jpg,18,2,770,204,791,222,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+989dd120-cef2-45b0-84f8-44027fea32a2,6-2-1.jpg,18,3,747,268,766,292,none,door_handle,32,doorhandle.n.01,hallway,['white'],[],[],[],[]
+d0bc2865-9e2b-40fe-b1b4-d04fe5cfa0b8,6-2-1.jpg,18,4,742,154,764,385,partial,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+ab1c42d4-0979-489c-b2da-61ef5a9c43f2,6-2-1.jpg,18,5,883,70,1063,459,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+a770db77-89e2-4dcf-980f-9e73ff7cefe0,6-2-1.jpg,18,6,940,455,1032,491,partial,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+cc52b2bb-3410-4bab-92bf-5c60af7a2ee7,6-2-1.jpg,18,7,885,472,1045,522,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+203bfbf9-0369-448f-bb3b-64af2e78fb8c,6-2-1.jpg,18,8,898,431,980,520,partial,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+2edaec83-722e-4077-a6f0-907306a6b3d5,6-2-1.jpg,18,9,730,474,763,507,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+f0aa08ac-dfda-4886-bbbc-0a47cb8d0a75,6-2-1.jpg,18,10,627,388,648,407,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+49adf144-c655-4c17-8846-a2322a0f0ca0,6-2-1.jpg,18,11,597,331,677,464,none,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+7299108d-4c85-46e4-88ee-3b1aed1fce68,6-2-1.jpg,18,12,96,27,201,175,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+764c8b38-3c0a-45df-a176-9303baea34d1,6-2-1.jpg,18,13,26,233,146,464,none,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+9139087e-b407-4c19-ba00-0f5277fcb879,6-2-1.jpg,18,14,71,481,214,522,partial,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+bf759df2-72f7-4f1b-a4cc-9b39e4c10bb2,6-2-1.jpg,18,15,324,394,513,519,none,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+4a2d320d-fd3b-489f-870a-a04a0207c9b7,6-2-1.jpg,18,16,237,281,415,494,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+5d7a8c2b-c496-4ed6-9ee1-8022fbbc5a4a,6-2-1.jpg,18,17,651,470,1080,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+a0d2b4f6-f6e0-4824-ad54-83d0ca7553e1,6-2-2.jpg,9,0,999,314,1072,459,none,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+4d56b1ee-7fc2-4417-b763-57e30200a5bf,6-2-2.jpg,9,1,772,133,1050,180,none,lamp,49,lamp.n.02,living room,['white'],[],[],[],[]
+21058545-f238-4175-9c43-0a5c99f24aae,6-2-2.jpg,9,2,261,133,561,186,none,lamp,44,lamp.n.02,living room,['white'],[],[],[],[]
+37dd030a-09eb-46c7-b6df-527859486800,6-2-2.jpg,9,3,114,284,230,424,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+a72d49cb-bb5d-45ef-b9bd-7b572ddd37e9,6-2-2.jpg,9,4,28,472,143,520,partial,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+37abed36-46ae-4c62-9c48-900273062403,6-2-2.jpg,9,5,737,402,776,523,severe,door,24,door.n.01,hallway,['blue'],[32],[],[],[65]
+e892ad42-ec0b-4540-897f-8ebfbe6368a1,6-2-2.jpg,9,6,778,456,796,474,none,sign,65,sign.n.02,hallway,['orange'],[],[],[],[24]
+1adb1fbe-c20f-44e2-825c-2fa1dc22209f,6-2-2.jpg,9,7,1030,492,1069,520,partial,door_handle,36,doorhandle.n.01,living room,['white'],[],[3],[],[]
+30a8a15c-a419-4d5a-bb3d-60eed5036b77,6-2-2.jpg,9,8,862,313,1078,520,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+6bbfab77-34b9-4152-9fcd-9ed3d1f310e6,6-3-0.jpg,11,0,922,34,955,61,none,rubiks_cube,62,toy.n.01,living room,"['yellow', 'white', 'red', 'green', 'blue', 'orange']",[],[],[22],[1]
+a12d4fb4-6932-4fc0-8ddf-49bf13fdc8f0,6-3-0.jpg,11,1,798,18,828,52,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+465f2c66-507d-4c9d-bcba-2005b43557e3,6-3-0.jpg,11,2,565,161,606,206,none,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+96e52a90-37f5-4e75-9404-8bc6d9647e4b,6-3-0.jpg,11,3,358,114,446,212,none,bag,6,bag.n.04,living room,['gray'],[],[],[],"[7, 17]"
+4609b269-8520-40cd-9787-b7c9d811b0c6,6-3-0.jpg,11,4,279,2,310,38,partial,vase,79,vase.n.01,living room,['transparent'],[],[58],[],[57]
+43057eba-0861-49ca-a1d2-b62d649353e3,6-3-0.jpg,11,5,156,0,216,50,partial,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+dc595292-cef4-4e8c-a670-6a3d110502b3,6-3-0.jpg,11,6,45,187,116,217,none,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+0fe397ca-792c-4881-a78c-2f9292e9e811,6-3-0.jpg,11,7,2,218,291,519,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+82546424-e3d5-46a8-b55b-f992ad23f273,6-3-0.jpg,11,8,134,0,375,220,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+820e47f6-3c16-4ebe-8371-07c88b87e228,6-3-0.jpg,11,9,631,1,912,436,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+0a049c48-4d15-4761-b5c6-2d30470a4c23,6-3-0.jpg,11,10,716,42,1080,520,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+b013037f-7fcb-49ff-8007-e09894e3d8ca,6-3-1.jpg,16,0,776,335,805,365,none,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+6f70faf5-6f41-4dcf-b7ba-da257f4d2a46,6-3-1.jpg,16,1,894,342,919,370,none,rubiks_cube,62,toy.n.01,living room,"['yellow', 'white', 'red', 'green', 'blue', 'orange']",[],[],[22],[1]
+49a36fd1-46b2-42cf-a40b-9d327a0e4dd7,6-3-1.jpg,16,2,1046,237,1079,411,partial,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+bda88d86-8f65-49b5-a941-be46f7e535e2,6-3-1.jpg,16,3,1051,289,1078,426,partial,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+92e7b28b-a099-4270-84ca-b4bb70d3dae3,6-3-1.jpg,16,4,875,0,977,294,none,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+454db1b0-e8cc-4ff0-9266-85f24fea43b2,6-3-1.jpg,16,5,568,472,608,516,none,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+2be0145b-704a-469d-8744-b2dbea7c4a73,6-3-1.jpg,16,6,640,276,917,523,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+730ce3c9-cb1d-4ad6-80c7-0690d3f3df06,6-3-1.jpg,16,7,759,357,1079,523,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+51a53cd8-51cf-4a7f-986e-07e35b3178b9,6-3-1.jpg,16,8,368,422,445,521,none,bag,6,bag.n.04,living room,['gray'],[],[],[],"[7, 17]"
+7c75a31e-138e-4dee-95fe-4fa8b17cb727,6-3-1.jpg,16,9,257,44,282,109,none,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+94ceeb5e-7d43-4f55-a852-dfe5fe6ec2d6,6-3-1.jpg,16,10,218,168,235,185,none,rubiks_cube,60,toy.n.01,living room,"['white', 'yellow', 'red', 'blue', 'orange', 'green']",[],[88],[78],[]
+187af313-8f76-4c02-b067-a211d641012a,6-3-1.jpg,16,11,195,284,252,355,none,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+75a2ea73-1da0-4845-a66a-663abb7df7ea,6-3-1.jpg,16,12,215,196,254,263,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+0333324d-cced-4bea-a55c-15709db6d477,6-3-1.jpg,16,13,281,197,339,261,none,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+f4da70b0-b6bc-4a9e-b289-e5c248474eda,6-3-1.jpg,16,14,304,293,339,356,none,vase,79,vase.n.01,living room,['transparent'],[],[58],[],[57]
+6ec19986-8887-4135-9655-ceb6e65979de,6-3-1.jpg,16,15,173,102,379,517,none,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+2e2add7a-0793-4a38-913e-7ab3faf2c9ce,6-3-2.jpg,10,0,1009,80,1080,346,severe,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+72688ed2-5ae2-400f-801b-b881a64d43b1,6-3-2.jpg,10,1,851,241,989,522,partial,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+749f66ce-8852-42b9-ab90-c78c9f43bffe,6-3-2.jpg,10,2,589,1,706,214,partial,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+2b24dcad-9b53-4aca-9fa3-0c0d5f023750,6-3-2.jpg,10,3,1,24,172,224,partial,lamp,49,lamp.n.02,living room,['white'],[],[],[],[]
+5217b064-0546-4842-ae35-7ed42cbd876e,6-3-2.jpg,10,4,274,287,299,346,none,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+93798c11-3ba6-4f5e-a0a7-a527ba00b572,6-3-2.jpg,10,5,221,402,243,419,none,rubiks_cube,60,toy.n.01,living room,"['white', 'yellow', 'red', 'blue', 'orange', 'green']",[],[88],[78],[]
+db58480e-ae64-48eb-8bf2-61a0469a42e7,6-3-2.jpg,10,6,213,428,254,497,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+b5eae66f-aad8-4feb-bdb7-63eda8c5ef03,6-3-2.jpg,10,7,273,434,340,497,none,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+8545ed69-6c23-428a-96d1-3f9e08788df3,6-3-2.jpg,10,8,163,343,386,522,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+63a6a700-9998-4524-b404-bebf7a12d2b7,6-3-2.jpg,10,9,1052,460,1080,520,severe,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+0d2d48e6-4a7c-4d03-8a6c-cd0835c12bbb,7-0-0.jpg,13,0,56,306,121,363,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+44b9ce59-c81f-4b3c-a9c1-e5350da0c5ae,7-0-0.jpg,13,1,5,155,108,280,none,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+cc92203b-7f2a-4e79-b6ae-ba528fe348b2,7-0-0.jpg,13,2,229,192,283,231,none,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+b6371dc2-5c68-4615-b762-b6ab77a6fb3b,7-0-0.jpg,13,3,188,169,255,219,partial,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+fa99b205-1368-40c6-8b9f-2d853c6dc237,7-0-0.jpg,13,4,583,0,657,171,partial,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+4eb048e7-ccf5-45b9-a12d-d145d8978422,7-0-0.jpg,13,5,849,46,912,100,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+0af39d13-46b5-4724-92ab-14ea25a16422,7-0-0.jpg,13,6,825,268,1064,447,none,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+a14f05fc-2527-4bd7-8ad2-bd11c5b94069,7-0-0.jpg,13,7,670,41,1079,480,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+c0e5dc61-1b3e-4357-b84d-5dd8d4bb1f86,7-0-0.jpg,13,8,111,31,128,48,partial,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+c342f022-3881-4954-acda-55ff0a4e8388,7-0-0.jpg,13,9,303,0,327,34,partial,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+5adc8d0e-39d1-4ce4-b9df-912b1d66eb1b,7-0-0.jpg,13,10,121,2,310,193,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+ceef0fdb-6c08-4faf-b3fd-bd83eacdb810,7-0-0.jpg,13,11,76,25,411,198,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+d1b86b89-e1f5-457f-82f6-b9b3240171c8,7-0-0.jpg,13,12,3,187,357,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+a40a62da-8b3d-462c-9674-511555e69bf2,7-0-1.jpg,16,0,863,1,1017,208,partial,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+127ac621-fffe-4491-bcc6-7701df62e2f1,7-0-1.jpg,16,1,834,353,888,404,none,teddy_bear,76,teddy.n.01,living room,['orange'],[],[],[18],[]
+2afc9de6-b3f4-4adf-874f-66e9fb5fd9ea,7-0-1.jpg,16,2,670,334,1079,520,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+6334eaee-52ec-4269-a8b1-25972b783314,7-0-1.jpg,16,3,587,300,654,475,none,robot,56,robot.n.01,living room,['white'],[],[],[],[]
+0a4cd3f3-dc2a-4a86-ad1b-61d45bb06af7,7-0-1.jpg,16,4,343,305,365,345,none,wine_glass,89,wineglass.n.01,living room,['transparent'],[],[],[22],[87]
+60324102-ecbd-4eac-aec4-8715c658dd4e,7-0-1.jpg,16,5,331,284,352,346,partial,wine_bottle,87,wine-bottle.n.01,living room,['green'],[],[],[22],[89]
+30b2d4ce-165a-4b43-8324-9c6d8b08193f,7-0-1.jpg,16,6,302,126,389,305,none,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+0bc9e8c0-6472-4f45-be59-84abe567521f,7-0-1.jpg,16,7,147,331,164,349,partial,apple,1,apple.n.01,living room,['red'],[],[],[22],[62]
+ed932eeb-f21a-48a9-8e39-db8a0f424f42,7-0-1.jpg,16,8,232,498,288,520,partial,cup,19,cup.n.01,living room,['white'],[],[],[74],"[59, 75, 80]"
+c33c24d9-a074-4a5f-8aae-80d9686b71cb,7-0-1.jpg,16,9,199,473,264,521,partial,teapot,75,teapot.n.01,living room,['white'],[],[],[74],"[19, 80]"
+d771c4f4-cda2-486a-8124-a2092fe4ab78,7-0-1.jpg,16,10,31,449,105,522,partial,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+e0ae62c5-9263-41be-b2c4-2eb3aa33502e,7-0-1.jpg,16,11,154,293,312,494,partial,chair,13,chair.n.01,living room,['blue'],[],[],[],[22]
+3a44d905-9baf-4a5f-8f23-3e07ee4a967b,7-0-1.jpg,16,12,109,337,414,504,partial,desk,22,desk.n.01,living room,['wooden'],"[1,62,87,89]",[81],[],[13]
+e968d25c-b81d-4373-9ca5-553819d16ffa,7-0-1.jpg,16,13,130,131,215,308,none,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+994070a8-a209-4730-bfe9-88ca29118cff,7-0-1.jpg,16,14,31,0,187,19,severe,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+cb4c2dcd-7b28-4caa-8936-1a70e7292d85,7-0-1.jpg,16,15,3,491,360,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+a881bc62-1fbb-4c78-8976-2548fb2ad595,7-0-2.jpg,5,0,480,210,735,261,none,lamp,43,lamp.n.02,living room,['white'],[],[],[],[]
+adbe7337-3303-4263-b232-64b14a2068a1,7-0-2.jpg,5,1,61,214,310,266,none,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+a0616145-a4c6-425b-affd-2b8ea43c8f21,7-0-2.jpg,5,2,288,376,397,521,partial,window,81,window.n.01,living room,['transparent'],[],[],[22],[85]
+bb7edce4-0442-4364-9eca-acd441f82fe7,7-0-2.jpg,5,3,114,377,225,520,partial,window,85,window.n.01,living room,['transparent'],[],[],[],[81]
+065c38d1-b440-4ee2-91af-2d7607581dc8,7-0-2.jpg,5,4,845,236,1007,452,none,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+19023b06-7937-4a39-8a8c-f0cd64f086a7,7-1-0.jpg,5,0,707,314,1079,521,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+2549c118-840a-462c-82b9-e608a2531f3e,7-1-0.jpg,5,1,801,0,1080,368,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+26ba2f60-1986-419b-bca0-71cb8c7d1f1e,7-1-0.jpg,5,2,261,0,507,220,partial,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+d0b188dc-bd18-464e-92d5-ff5ccde31dd1,7-1-0.jpg,5,3,0,60,278,520,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+f2bc90ef-17f9-4033-9b8b-bec1800aefea,7-1-0.jpg,5,4,1,296,98,487,partial,bag,2,bag.n.04,living room,['blue'],[],[],[18],[73]
+0e051103-4db9-4467-bd58-9b2c424e9f0d,7-1-1.jpg,4,0,822,259,1080,521,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+30a5fccc-5140-4e5d-a527-4f88d51dd5bc,7-1-1.jpg,4,1,487,0,694,82,partial,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+4d2217e2-af50-447d-ac4e-24dce6d5b67e,7-1-1.jpg,4,2,298,204,510,514,none,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+1d2273b9-d843-4201-9886-f18d82b44d72,7-1-1.jpg,4,3,1,357,259,521,partial,sofa,18,sofa.n.01,living room,['brown'],"[2,76]",[52],[],[73]
+708b6300-c27b-4444-b1d1-4fbfc158339c,7-1-2.jpg,3,0,493,220,687,365,none,painting,51,decoration.n.01,living room,['white'],[],[],[73],[]
+ac5a7c37-3822-4c18-998e-2d89945c8e39,7-1-2.jpg,3,1,307,479,498,520,severe,t-shirt,73,t-shirt.n.01,living room,['orange'],[],[51],[],"[18, 12, 2]"
+d269ee68-9374-475f-b046-8668a3847947,7-1-2.jpg,3,2,0,220,30,334,severe,painting,52,decoration.n.01,living room,"['blue', 'yellow', 'black']",[],[],[18],[]
+22b47a76-72bb-4648-8033-03dc4a7a4081,7-2-0.jpg,4,0,776,238,810,275,none,apple,0,apple.n.01,living room,['red'],[],[],[13],[]
+83d00e39-8a48-497e-8931-d9495dde1d35,7-2-0.jpg,4,1,690,97,884,414,none,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+ee287c2c-66a3-4715-b6c9-04fefe837659,7-2-0.jpg,4,2,2,272,447,520,partial,ottoman,37,ottoman.n.04,living room,"['wooden', 'black']",[],[],[],[12]
+8f125db8-1707-40b8-93d2-62879ab156fd,7-2-0.jpg,4,3,0,0,219,370,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+831515d5-d979-4663-acba-a5317cc4e088,7-2-1.jpg,2,0,718,411,874,521,partial,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+bb873b48-b8f2-489a-9aa4-bbfb93f46951,7-2-1.jpg,2,1,0,281,225,522,partial,chair,12,chair.n.01,living room,"['wooden', 'gray']",[],[],[],"[37, 15, 73]"
+f4b9842a-a0b6-4bf3-b558-7f587100c738,7-3-0.jpg,15,0,460,171,508,201,none,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+b7cfb5e4-ea62-4dfd-bf5a-23c93c6399a7,7-3-0.jpg,15,1,133,1,382,237,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+a49d1a9f-3bcc-4ec3-9a56-99df0c734bdb,7-3-0.jpg,15,2,2,0,104,162,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+b2a08746-4f00-4370-8107-901cc0e0a41c,7-3-0.jpg,15,3,54,0,75,22,partial,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+73f11699-5fa4-4da0-884a-65898fc003ba,7-3-0.jpg,15,4,970,160,1010,199,none,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+da93e1d7-97fa-49bf-9407-0d75f53e7959,7-3-0.jpg,15,5,1048,167,1079,304,partial,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+13af0d66-5a3e-4536-860e-5a461afd3f42,7-3-0.jpg,15,6,1004,329,1069,389,none,rubiks_cube,59,toy.n.01,living room,"['yellow', 'red', 'green', 'orange', 'blue', 'white']",[],[],[74],"[10, 80, 19]"
+217e4109-bc27-4676-863e-905a3f3da077,7-3-0.jpg,15,7,663,0,709,31,severe,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+f46bc67c-dbe3-4c6d-a3f9-26ada244da18,7-3-0.jpg,15,8,768,2,798,32,partial,vase,79,vase.n.01,living room,['transparent'],[],[58],[],[57]
+59f51012-dec6-458e-a0eb-054d7e15450d,7-3-0.jpg,15,9,799,179,901,224,none,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+f194ceaf-2073-4503-93b8-a89109ca1398,7-3-0.jpg,15,10,839,198,999,275,partial,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+113b9eda-f6e6-44fd-8253-e3c0f9cb3be0,7-3-0.jpg,15,11,817,114,873,196,partial,bag,6,bag.n.04,living room,['gray'],[],[],[],"[7, 17]"
+64333e85-1b02-42b2-af5e-ca14c6623215,7-3-0.jpg,15,12,627,0,851,208,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+6766d483-fdde-441c-8930-7bc7c651fd24,7-3-0.jpg,15,13,748,198,1078,521,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+f6599293-eaac-4659-99c1-e1ad1bf2edfa,7-3-0.jpg,15,14,1,423,41,506,severe,chair,15,chair.n.01,living room,['blue'],[0],[],[],"[26, 12]"
+eb6e3631-7f9e-44d9-8b8d-872477c4a72f,7-3-1.jpg,21,0,459,481,510,512,none,shoes,63,shoe.n.01,living room,['gray'],[],[],[],"[26, 17]"
+7a16e14a-1804-492a-b439-82d9758ccacb,7-3-1.jpg,21,1,975,452,1016,491,none,ball,7,ball.n.01,living room,['white'],[],[],[],[6]
+fa216066-e57a-4796-a54b-a500995abd4d,7-3-1.jpg,21,2,706,44,729,106,none,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+bbb7d54d-f95a-4e1c-9fc1-220a874b413c,7-3-1.jpg,21,3,667,166,683,181,none,rubiks_cube,60,toy.n.01,living room,"['white', 'yellow', 'red', 'blue', 'orange', 'green']",[],[88],[78],[]
+a36a19be-4b94-42d2-afb7-fa8e83eeeea5,7-3-1.jpg,21,4,668,191,697,258,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+88d8550b-d446-417b-9e15-6cfe5c59b024,7-3-1.jpg,21,5,649,282,693,349,none,robot,57,robot.n.01,living room,['silver'],[],[78],[],[79]
+27f60985-2cf0-4eb8-9668-c6f412141553,7-3-1.jpg,21,6,745,291,776,348,none,vase,79,vase.n.01,living room,['transparent'],[],[58],[],[57]
+7aa81d6f-cf9c-4355-b2b2-a1aa28099520,7-3-1.jpg,21,7,713,196,786,256,none,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+d1f77e6a-df27-4ebb-9b8f-1a7707d518da,7-3-1.jpg,21,8,1055,457,1079,520,severe,vase,80,vase.n.01,living room,['transparent'],[],[],[74],"[75, 19, 10, 59]"
+e3f7a7a0-f531-494c-81b3-c4449756f5e5,7-3-1.jpg,21,9,802,486,901,521,partial,headphones,38,headphones.n.01,living room,['black'],[],[],"[10, 74]",[10]
+192269ff-20ed-45af-9752-e29491cb2cea,7-3-1.jpg,21,10,825,416,882,498,partial,bag,6,bag.n.04,living room,['gray'],[],[],[],"[7, 17]"
+6099298f-831b-465f-a401-884e0b3a0e3c,7-3-1.jpg,21,11,632,102,824,518,none,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+c3bd4eb1-01f9-494f-8b2a-53e1730130c1,7-3-1.jpg,21,12,340,81,400,245,none,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+588c63e4-320c-4a0d-b206-23d636e26cdd,7-3-1.jpg,21,13,342,278,377,314,none,door_handle,36,doorhandle.n.01,living room,['white'],[],[3],[],[]
+76878913-ba60-46f6-82cf-843470672934,7-3-1.jpg,21,14,124,220,145,237,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+50d8b592-339f-422d-a2cf-13504127a37f,7-3-1.jpg,21,15,98,293,119,315,none,door_handle,34,doorhandle.n.01,hallway,['white'],[],[],[],[]
+580522d5-898f-431d-beac-c3a11dbc619a,7-3-1.jpg,21,16,38,129,120,441,none,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+f2e3bcad-2469-47ef-ada2-8a5aea745fa6,7-3-1.jpg,21,17,80,76,162,128,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+0de92b3a-cddc-48f6-8242-a2771ddf55c2,7-3-1.jpg,21,18,182,39,380,520,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
+18c09c99-3117-49c7-a9bc-801bdb3b72b6,7-3-1.jpg,21,19,755,484,1079,520,partial,table,74,table.n.02,living room,['white'],"[38,80,10,75,19,59]",[],[],[]
+53d37820-657f-4980-a4e6-274a72a57f19,7-3-1.jpg,21,20,878,504,995,520,severe,book,10,book.n.02,living room,['gray'],[38],[],[74],"[38, 80, 59]"
+dd2f1c35-64c8-4749-b146-851eacf5e7d5,7-3-2.jpg,12,0,530,11,590,232,none,lamp,49,lamp.n.02,living room,['white'],[],[],[],[]
+9e4b1fc6-3731-4acc-ab16-89e3482823c1,7-3-2.jpg,12,1,970,108,1080,230,partial,lamp,42,lamp.n.02,living room,['white'],[],[],[],[]
+f1578347-d9ee-4062-9fc6-a0a11a8e381b,7-3-2.jpg,12,2,695,294,718,352,none,wine_bottle,88,wine-bottle.n.01,living room,['green'],[],[],"[17, 60]",[]
+de52db93-4f18-4a86-841b-6fb5873fb26d,7-3-2.jpg,12,3,664,409,683,424,none,rubiks_cube,60,toy.n.01,living room,"['white', 'yellow', 'red', 'blue', 'orange', 'green']",[],[88],[78],[]
+cb8a00e5-9033-40f3-9ce9-18bc914f7359,7-3-2.jpg,12,4,668,435,699,503,none,trophy,78,trophy.n.02,living room,['silver'],[],[60],[57],[58]
+49d16df9-df35-4214-ad5a-2b6d72471ba7,7-3-2.jpg,12,5,716,435,790,503,none,robot,58,robot.n.01,living room,['silver'],[],[],[79],[78]
+75b19b5c-99f3-41cd-954f-23c72a8dab2e,7-3-2.jpg,12,6,341,329,397,486,none,bag,3,bag.n.04,living room,['black'],[],[],[36],[26]
+36128ef9-6921-4931-abed-dbbc31978caf,7-3-2.jpg,12,7,624,348,830,521,partial,bookshelf,17,bookshelf.n.01,living room,['white'],[88],[],[],"[6, 63]"
+105ad779-8b86-417a-9ebe-7fabe766afe7,7-3-2.jpg,12,8,117,451,138,470,none,sign,68,sign.n.02,hallway,['orange'],[],[],[],[25]
+c2c1bcf3-7461-4ae6-8a67-9f0cfd61a5c5,7-3-2.jpg,12,9,18,353,129,520,partial,door,25,door.n.01,hallway,['blue'],[34],[],[],[68]
+6326d57f-82a7-4148-b117-2dbee88dcde6,7-3-2.jpg,12,10,106,312,179,360,partial,lamp,41,lamp.n.02,hallway,['white'],[],[],[],[]
+fbe54111-a6f8-4919-8df0-c53b867987b4,7-3-2.jpg,12,11,162,285,392,521,partial,door,26,door.n.01,living room,['blue'],"[36,3]",[],[],"[63, 70, 15, 3]"
